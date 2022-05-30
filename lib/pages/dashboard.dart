@@ -1,3 +1,4 @@
+import 'package:diagnose/pages/categories.dart';
 import 'package:flutter/material.dart';
 
 class DashBoard extends StatefulWidget {
@@ -14,47 +15,47 @@ class _DashBoardState extends State<DashBoard> {
     double width = MediaQuery.of(context).size.width;
 
     Widget makDiv(String image, String title, String description) {
-      return Padding(
-        padding: const EdgeInsets.only(left: 33, top: 10),
-        child: Container(
-          height: height * 0.19,
-          width: width * 0.38,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                blurRadius: 10,
-                color: Colors.grey,
-              )
-            ],
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            children: [
-              Image.asset(
-                image,
-                height: height * 0.11,
-                width: width * 0.21,
-              ),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontFamily: "Roboto",
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12),
-              ),
-              Text(
-                description,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontFamily: "Roboto",
-                    fontWeight: FontWeight.w300,
-                    fontSize: 9,
-                    color: Color(0xFF626262)),
-              ),
-            ],
-          ),
+      return Container(
+        height: height * 0.2,
+        width: width * 0.38,
+        decoration: BoxDecoration(
+          boxShadow: [
+            const BoxShadow(
+              blurRadius: 10,
+              color: Colors.grey,
+            )
+          ],
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              image,
+              height: height * 0.1,
+              width: width * 0.21,
+            ),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                  fontFamily: "Roboto",
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12),
+            ),
+            SizedBox(
+              height: height * 0.01,
+            ),
+            Text(
+              description,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                  fontFamily: "Roboto",
+                  fontWeight: FontWeight.w300,
+                  fontSize: 9,
+                  color: Color(0xFF626262)),
+            ),
+          ],
         ),
       );
     }
@@ -72,7 +73,7 @@ class _DashBoardState extends State<DashBoard> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.apps,
               color: Colors.black,
               size: 30,
@@ -80,8 +81,8 @@ class _DashBoardState extends State<DashBoard> {
           );
         }),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0),
+          const Padding(
+            padding: EdgeInsets.only(right: 8.0),
             child: Icon(
               Icons.notifications,
               color: Colors.black,
@@ -100,7 +101,7 @@ class _DashBoardState extends State<DashBoard> {
                   //               duration: Duration(seconds: 1),
                   //               child: About()));
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.help_outline,
                   color: Colors.black,
                   size: 30,
@@ -109,10 +110,11 @@ class _DashBoardState extends State<DashBoard> {
         ],
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xffD6D7D7),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: height * 0.03,
@@ -127,9 +129,9 @@ class _DashBoardState extends State<DashBoard> {
                       color: Colors.grey,
                     )
                   ],
-                  gradient: LinearGradient(colors: [
+                  gradient: const LinearGradient(colors: [
                     Color.fromRGBO(0, 172, 238, 10),
-                    Color.fromRGBO(29, 191, 115, 1),
+                    const Color.fromRGBO(29, 191, 115, 1),
                   ]),
                   borderRadius: BorderRadius.circular(5)),
               child: Row(
@@ -140,14 +142,13 @@ class _DashBoardState extends State<DashBoard> {
                       "assets/apbarr.png",
                       height: height * 0.13,
                       width: width * 0.13,
-                      // fit: BoxFit.fitHeight,
                     ),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Book your appointment",
                         style: TextStyle(
                             fontFamily: "Roboto",
@@ -155,7 +156,7 @@ class _DashBoardState extends State<DashBoard> {
                             fontWeight: FontWeight.w400,
                             color: Color(0xFFFFFFFF)),
                       ),
-                      Text(
+                      const Text(
                         "Find nearest repair store with free quotation",
                         style: TextStyle(
                             fontFamily: "Roboto",
@@ -169,45 +170,65 @@ class _DashBoardState extends State<DashBoard> {
               ),
             ),
             SizedBox(
-              height: height * 0.03,
+              height: height * 0.02,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 makDiv(
                     "assets/Icons/carbon_wifi-not-secure.png",
                     "Network Unlock",
                     "After unlock you can use your\nPhone any country and any sim"),
-                makDiv(
-                    "assets/Icons/icon-png (1).png",
-                    "Buy/Sale Devices",
+                SizedBox(
+                  width: width * 0.082,
+                ),
+                makDiv("assets/Icons/icon-png (1).png", "Buy/Sale Devices",
                     "Now phone buy and sale is easier\nthen before you can see all prices\nand sell your phone just in minutes"),
               ],
             ),
+            SizedBox(
+              height: height * 0.02,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                makDiv(
-                    "assets/Icons/icon-ss.png",
-                    "TopUp You Phone",
+                makDiv("assets/Icons/icon-ss.png", "TopUp You Phone",
                     "You can load your talk time\nBalance over counteries just by\nnumber"),
-                makDiv(
-                    "assets/Icons/carbon_wifi-not-secure.png",
-                    "Diagnostics",
-                    "You can diagnos the all issue in\nyour phone in one clicke"),
+                SizedBox(
+                  width: width * 0.082,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Home(),
+                      ),
+                    );
+                  },
+                  child: makDiv(
+                      "assets/Icons/Diagnostic-icon.png",
+                      "Diagnostics",
+                      "You can diagnos the all issue in\nyour phone in one clicke"),
+                ),
                 SizedBox(
                   height: height * 0.01,
                 ),
               ],
             ),
+            SizedBox(
+              height: height * 0.02,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                makDiv(
-                    "assets/Icons/Diagnostic-icon.png",
-                    "Back Up & Restore",
+                makDiv("assets/Icons/icon2.png", "Back Up & Restore",
                     "You can transfer your data faster\nand sequre to PC or Phone"),
-                makDiv(
-                    "assets/Icons/carbon_wifi-not-secure.png",
-                    "Store",
-                    "All quantity products cheaper price,\nThen everywhere buy conline or\nwalk in your nearest store.")
+                SizedBox(
+                  width: width * 0.082,
+                ),
+                makDiv("assets/Icons/Grocery Store.png", "Store",
+                    "All quantity products cheaper price,Then everywhere buy conline or walk in your nearest store.")
               ],
             )
           ],

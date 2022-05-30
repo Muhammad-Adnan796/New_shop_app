@@ -39,7 +39,7 @@ class _IntroState extends State<Intro> {
                   children: [
                     const Padding(
                       padding: EdgeInsets.only(left: 100),
-                      child:  Text(
+                      child: Text(
                         "Introduction",
                         style: TextStyle(
                             fontSize: 30,
@@ -50,7 +50,7 @@ class _IntroState extends State<Intro> {
                       ),
                     ),
                     SizedBox(
-                      width: width * 0.10,
+                      width: width * 0.07,
                     ),
                     TextButton(
                         onPressed: () {
@@ -65,7 +65,7 @@ class _IntroState extends State<Intro> {
                         child: const Text(
                           "Skip",
                           style: TextStyle(
-                              color:  Color.fromRGBO(0, 0, 0, 1),
+                              color: Color.fromRGBO(0, 0, 0, 1),
                               fontFamily: 'Advent Pro',
                               fontSize: 20,
                               letterSpacing: 0,
@@ -81,20 +81,21 @@ class _IntroState extends State<Intro> {
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
+                    // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 15.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Container(
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            width: width * 0.9,
+                            width: width * 0.8,
                             height: height * 0.8,
                             child: Column(
                               children: [
                                 Container(
-                                  height: height * 0.2,
+                                  height: height * 0.23,
                                   width: width,
                                   decoration: const BoxDecoration(
                                     gradient: LinearGradient(
@@ -104,7 +105,9 @@ class _IntroState extends State<Intro> {
                                           Color.fromRGBO(29, 191, 115, 1),
                                           Color.fromRGBO(0, 172, 238, 1)
                                         ]),
-                                    borderRadius:  BorderRadius.only(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10),
                                       bottomLeft: Radius.elliptical(200, 70),
                                       bottomRight: Radius.elliptical(200, 70),
                                     ),
@@ -117,7 +120,8 @@ class _IntroState extends State<Intro> {
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                                top: 60.0,),
+                                              top: 60.0,
+                                            ),
                                             child: Container(
                                                 height: 55,
                                                 width: 55,
@@ -173,7 +177,7 @@ class _IntroState extends State<Intro> {
                                                 decoration: const BoxDecoration(
                                                   color: Colors.white,
                                                   borderRadius: BorderRadius
-                                                      .all( Radius.elliptical(
+                                                      .all(Radius.elliptical(
                                                           60.11320877075195,
                                                           58.8327789550781)),
                                                 ),
@@ -195,13 +199,16 @@ class _IntroState extends State<Intro> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
+                                    SizedBox(
+                                      height: height * 0.1,
+                                    ),
                                     Container(
                                         height: 55,
                                         width: 55,
                                         decoration: BoxDecoration(
                                           color: Colors.white,
                                           borderRadius: const BorderRadius.all(
-                                               Radius.elliptical(
+                                              Radius.elliptical(
                                                   60.11320877075195,
                                                   58.83271789550781)),
                                           border: Border.all(
@@ -225,10 +232,11 @@ class _IntroState extends State<Intro> {
                                           width: 55,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: const BorderRadius.all(
-                                                 Radius.elliptical(
-                                                    60.11320877075195,
-                                                    58.83271789550781)),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.elliptical(
+                                                        60.11320877075195,
+                                                        58.83271789550781)),
                                             border: Border.all(
                                               color: const Color(0xff11237),
                                               width: 2,
@@ -251,10 +259,11 @@ class _IntroState extends State<Intro> {
                                           width: 55,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: const BorderRadius.all(
-                                                Radius.elliptical(
-                                                    60.11320877075195,
-                                                    58.83271789550781)),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.elliptical(
+                                                        60.11320877075195,
+                                                        58.83271789550781)),
                                             border: Border.all(
                                               color: const Color(0xff11237),
                                               width: 2,
@@ -289,9 +298,16 @@ class _IntroState extends State<Intro> {
                                   height: 80,
                                 ),
                                 const Padding(
-                                  padding: EdgeInsets.only(left: 30.0),
+                                  padding: EdgeInsets.only(left: 15.0),
                                   child: Text(
-                                      "Check your phone’s health\n Create a complete status report\n Use it to dignose your mobile\n issues and we will repair."),
+                                    "Check your phone’s health\n Create a complete status report\n Use it to dignose your mobile issues\n and we will repair.",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: "Advent Pro",
+                                        color: Colors.black54,
+                                        fontSize: 15),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
@@ -338,7 +354,6 @@ class _IntroState extends State<Intro> {
                                                   BorderRadius.circular(10)),
                                           height: 6,
                                           width: 25,
-                                          // color: Colors.black,
                                         ),
                                       ),
                                     ],
@@ -347,45 +362,50 @@ class _IntroState extends State<Intro> {
                               ],
                             )),
                       ),
-                      SizedBox(
-                        height: height * 0.01,
-                      ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(left: 30.0),
                         child: Container(
-                            alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10)),
-                            width: width * 0.9,
+                            width: width * 0.8,
                             height: height * 0.8,
                             child: Column(children: [
                               Container(
-                                  height: 140,
-                                  width: width,
-                                  decoration: const BoxDecoration(
-                                    gradient:  LinearGradient(
-                                        begin: Alignment.topRight,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          const Color.fromRGBO(29, 191, 115, 1),
-                                          Color.fromRGBO(0, 172, 238, 1)
-                                        ]),
-                                    borderRadius:  BorderRadius.only(
-                                      bottomLeft:  Radius.elliptical(200, 70),
-                                      bottomRight: Radius.elliptical(200, 70),
-                                    ),
+                                height: height * 0.23,
+                                width: width,
+                                decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                        const Color.fromRGBO(29, 191, 115, 1),
+                                        Color.fromRGBO(0, 172, 238, 1)
+                                      ]),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(10),
+                                    topRight: Radius.circular(10),
+                                    bottomLeft: Radius.elliptical(200, 70),
+                                    bottomRight: Radius.elliptical(200, 70),
                                   ),
-                                  child: Image.asset(
-                                    "assets/slode2.png",
-                                    height: height * 0.3,
-                                    width: width * 0.2,
-                                  )),
+                                ),
+                                child: Image.asset(
+                                  "assets/slode2.png",
+                                  height: height * 0.5,
+                                  width: width * 0.4,
+                                ),
+                              ),
                               const Padding(
-                                padding: EdgeInsets.only(
-                                    top: 120.0, left: 30.0),
+                                padding: EdgeInsets.only(left: 17.0, top: 120),
                                 child: Text(
-                                    "Check your phone’s health Create a\n complete status report. Use it free\n and make a health report  and\n send us, We will repair it"),
+                                  "Check your phone’s health Create a\n complete status report. Use it free\n and make a health report  and\n send us, We will repair it",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Advent Pro",
+                                      color: Colors.black54,
+                                      fontSize: 15),
+                                ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
@@ -440,16 +460,19 @@ class _IntroState extends State<Intro> {
                             ])),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 10.0, right: 20.0),
+                        padding: const EdgeInsets.only(
+                          left: 30.0,
+                          right: 30,
+                        ),
                         child: Container(
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10)),
-                            width: width * 0.9,
+                            width: width * 0.8,
                             height: height * 0.8,
                             child: Column(children: [
                               Container(
-                                  height: 140,
+                                  height: height * 0.23,
                                   width: width,
                                   decoration: const BoxDecoration(
                                     gradient: LinearGradient(
@@ -459,7 +482,9 @@ class _IntroState extends State<Intro> {
                                           Color.fromRGBO(29, 191, 115, 1),
                                           const Color.fromRGBO(0, 172, 238, 1)
                                         ]),
-                                    borderRadius:  BorderRadius.only(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10),
                                       bottomLeft: Radius.elliptical(200, 70),
                                       bottomRight: Radius.elliptical(200, 70),
                                     ),
@@ -468,15 +493,22 @@ class _IntroState extends State<Intro> {
                                     padding: const EdgeInsets.only(top: 20.0),
                                     child: Image.asset(
                                       "assets/mapi.png",
-                                      height: height * 0.3,
-                                      width: width * 0.2,
+                                      height: height * 0.5,
+                                      width: width * 0.4,
                                     ),
                                   )),
                               const Padding(
                                 padding: EdgeInsets.only(
                                     top: 120.0, left: 40.0, right: 20.0),
                                 child: Text(
-                                    "Comair quotes from the best device reqair shops in your area"),
+                                  "Comair quotes from the best device reqair shops in your area",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Advent Pro",
+                                      color: Colors.black54,
+                                      fontSize: 15),
+                                ),
                               ),
                               SizedBox(height: height * 0.15),
                               Container(
@@ -489,7 +521,8 @@ class _IntroState extends State<Intro> {
                                       context,
                                       PageTransition(
                                         type: PageTransitionType.rightToLeft,
-                                        reverseDuration: const Duration(seconds: 1),
+                                        reverseDuration:
+                                            const Duration(seconds: 1),
                                         duration: const Duration(seconds: 1),
                                         child: const SelectWidget(),
                                       ),
@@ -504,11 +537,12 @@ class _IntroState extends State<Intro> {
                                     alignment: Alignment.center,
                                     height: height * 0.055,
                                     width: width * 0.4,
-                                    decoration:  BoxDecoration(
+                                    decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5.0),
                                       color: Colors.white,
                                       border: Border.all(
-                                        color: const Color.fromRGBO(29, 191, 115, 1),
+                                        color: const Color.fromRGBO(
+                                            29, 191, 115, 1),
                                         width: 2,
                                       ),
                                     ),
@@ -516,7 +550,7 @@ class _IntroState extends State<Intro> {
                                     child: Row(children: [
                                       const Text(
                                         "      Lets Start",
-                                        style:  TextStyle(
+                                        style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black),
                                       ),

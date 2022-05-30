@@ -102,14 +102,14 @@ class _SelectWidgetState extends State<SelectWidget> {
                                   width: 2,
                                 ),
                                 borderRadius: const BorderRadius.only(
-                                  topLeft:  Radius.circular(5),
+                                  topLeft: Radius.circular(5),
                                   topRight: Radius.circular(5),
-                                  bottomLeft:  Radius.circular(5),
+                                  bottomLeft: Radius.circular(5),
                                   bottomRight: Radius.circular(5),
                                 ),
                               )),
                           Padding(
-                            padding: const EdgeInsets.only(top: 10, left: 50),
+                            padding: const EdgeInsets.only(top: 10, left: 30),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -125,13 +125,13 @@ class _SelectWidgetState extends State<SelectWidget> {
                                       height: 1),
                                 ),
                                 SizedBox(
-                                  width: width * 0.06,
+                                  width: width * 0.08,
                                 ),
                                 Container(
                                   width: width * 0.06,
                                   height: height * 0.04,
                                   decoration: const BoxDecoration(
-                                    image:  DecorationImage(
+                                    image: DecorationImage(
                                         image: AssetImage(
                                             'assets/Doubleright.png'),
                                         fit: BoxFit.fitWidth),
@@ -146,7 +146,7 @@ class _SelectWidgetState extends State<SelectWidget> {
                     SizedBox(
                       height: height * 0.05,
                     ),
-                     GestureDetector(
+                    GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
@@ -169,14 +169,14 @@ class _SelectWidgetState extends State<SelectWidget> {
                                   width: 2,
                                 ),
                                 borderRadius: const BorderRadius.only(
-                                  topLeft:  Radius.circular(5),
+                                  topLeft: Radius.circular(5),
                                   topRight: Radius.circular(5),
-                                  bottomLeft:  Radius.circular(5),
+                                  bottomLeft: Radius.circular(5),
                                   bottomRight: Radius.circular(5),
                                 ),
                               )),
                           Padding(
-                            padding: const EdgeInsets.only(top: 10, left: 50),
+                            padding: const EdgeInsets.only(top: 10, left: 30),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -192,13 +192,13 @@ class _SelectWidgetState extends State<SelectWidget> {
                                       height: 1),
                                 ),
                                 SizedBox(
-                                  width: width * 0.06,
+                                  width: width * 0.08,
                                 ),
                                 Container(
                                   width: width * 0.06,
                                   height: height * 0.04,
                                   decoration: const BoxDecoration(
-                                    image:  DecorationImage(
+                                    image: DecorationImage(
                                         image: AssetImage(
                                             'assets/Doubleright.png'),
                                         fit: BoxFit.fitWidth),
