@@ -1,18 +1,16 @@
 import 'dart:async';
 
-import 'package:diagnose/pages/test_screens/oh_no1.dart';
+import 'package:diagnose/pages/quick_test_screens/oh_no1.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:page_transition/page_transition.dart';
 
-class Diagnose2 extends StatefulWidget {
-  const Diagnose2({Key? key}) : super(key: key);
+class LoadingQuickTest extends StatefulWidget {
+  const LoadingQuickTest({Key? key}) : super(key: key);
 
   @override
-  State<Diagnose2> createState() => _Diagnose2State();
+  State<LoadingQuickTest> createState() => _LoadingQuickTestState();
 }
 
-class _Diagnose2State extends State<Diagnose2> {
+class _LoadingQuickTestState extends State<LoadingQuickTest> {
   @override
   void initState() {
     super.initState();
@@ -21,7 +19,7 @@ class _Diagnose2State extends State<Diagnose2> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => Diagnose3(),
+          builder: (context) => OhNo1headphone(),
         ),
       );
     });

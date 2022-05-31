@@ -1,4 +1,4 @@
-import 'package:diagnose/pages/test_screens/loading.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -150,7 +150,7 @@ class _Diagnose1State extends State<Diagnose1> {
                       type: PageTransitionType.fade,
                       reverseDuration: const Duration(microseconds: 1),
                       duration: const Duration(microseconds: 1),
-                      child: const Diagnose2(),
+                      child: const Diagnose1(),
                     ),
                   );
                 },

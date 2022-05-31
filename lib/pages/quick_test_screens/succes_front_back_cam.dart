@@ -1,18 +1,16 @@
-import 'package:diagnose/pages/test_screens/loading.dart';
-import 'package:diagnose/pages/test_screens/headphone.dart';
-import 'package:diagnose/pages/test_screens/screen_analysis.dart';
+import 'package:diagnose/pages/categories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Diagnose3 extends StatefulWidget {
-  const Diagnose3({Key? key}) : super(key: key);
+class SuccessFrontBack extends StatefulWidget {
+  const SuccessFrontBack({Key? key}) : super(key: key);
 
   @override
-  State<Diagnose3> createState() => _Diagnose3State();
+  State<SuccessFrontBack> createState() => _SuccessFrontBackState();
 }
 
-class _Diagnose3State extends State<Diagnose3> {
+class _SuccessFrontBackState extends State<SuccessFrontBack> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -36,7 +34,7 @@ class _Diagnose3State extends State<Diagnose3> {
             height: height * 0.08,
           ),
           Text(
-            '2/8',
+            '7/8',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
@@ -58,7 +56,7 @@ class _Diagnose3State extends State<Diagnose3> {
               Container(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
-                  value: 0.2,
+                  value: 0.7,
                   backgroundColor: Colors.white.withOpacity(0.5),
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
@@ -66,24 +64,21 @@ class _Diagnose3State extends State<Diagnose3> {
             ],
           ),
           SizedBox(
-            height: height * 0.15,
+            height: height * 0.05,
           ),
           Container(
-            width: width * 0.24,
-            height: height * 0.12,
+            width: width * 0.6,
+            height: height * 0.25,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(
-                    'assets/cross.gif',
-                  ),
-                  fit: BoxFit.fill),
+                  image: AssetImage('assets/Gif/okay.gif'), fit: BoxFit.fill),
             ),
           ),
           SizedBox(
-            height: height * 0.08,
+            height: height * 0.01,
           ),
           Text(
-            'Oh, no!',
+            'Successfully',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -95,8 +90,11 @@ class _Diagnose3State extends State<Diagnose3> {
                 fontWeight: FontWeight.normal,
                 height: 1),
           ),
+          SizedBox(
+            height: height * 0.03,
+          ),
           Text(
-            'Make sure no headphones or\n any  otheraudio cables are \n plugged into yourphone.',
+            'Front and back camera is working',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -109,7 +107,26 @@ class _Diagnose3State extends State<Diagnose3> {
                 height: 1),
           ),
           SizedBox(
-            height: height * 0.19,
+            height: height * 0.2,
+          ),
+          GestureDetector(
+            // onTap: () {
+            //   Navigator.pushReplacement(context,
+            //       MaterialPageRoute(builder: (context) => OhnoSettings()));
+            // },
+            child: Text(
+              'Complete',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Roboto',
+                  fontSize: 20,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -128,15 +145,15 @@ class _Diagnose3State extends State<Diagnose3> {
                   Navigator.push(
                     context,
                     PageTransition(
-                      type: PageTransitionType.fade,
-                      reverseDuration: const Duration(microseconds: 1),
-                      duration: const Duration(microseconds: 1),
-                      child: const HEadphone1(),
+                      type: PageTransitionType.rightToLeft,
+                      reverseDuration: const Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
+                      child: const Home(),
                     ),
                   );
                 },
                 child: const Text(
-                  "Try Again",
+                  "Next",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     letterSpacing: 2,
@@ -149,28 +166,6 @@ class _Diagnose3State extends State<Diagnose3> {
               ),
             ),
           ),
-          SizedBox(
-            height: height * 0.005,
-          ),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => ScreenAnalysis(),),);
-            },
-            child: Text(
-              'Skip',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1),
-                  fontFamily: 'Advent Pro',
-                  fontSize: 25,
-                  decoration: TextDecoration.none,
-                  letterSpacing:
-                      0 /*percentages not used in flutter. defaulting to zero*/,
-                  fontWeight: FontWeight.normal,
-                  height: 1),
-            ),
-          )
         ],
       ),
     );

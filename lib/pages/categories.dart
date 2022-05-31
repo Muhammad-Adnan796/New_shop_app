@@ -1,4 +1,6 @@
-import 'package:diagnose/pages/test_screens/quick_test.dart';
+
+import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
+import 'package:diagnose/pages/quick_test_screens/quick_test.dart';
 import 'package:diagnose/widgets/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -285,15 +287,29 @@ class _HomeState extends State<Home> {
               InkWell(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.leftToRight,
-                            reverseDuration: Duration(seconds: 1),
-                            duration: Duration(seconds: 1),
-                            child: Diagnose1(),),);
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.leftToRight,
+                        reverseDuration: Duration(seconds: 1),
+                        duration: Duration(seconds: 1),
+                        child: Diagnose1(),
+                      ),
+                    );
                   },
                   child: testContainers('assets/1.svg', "Quick Test")),
-              testContainers('assets/2.svg', "Full Test"),
+              InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.fade,
+                        reverseDuration: Duration(seconds: 1),
+                        duration: Duration(seconds: 1),
+                        child: FullTest(),
+                      ),
+                    );
+                  },
+                  child: testContainers('assets/2.svg', "Full Test")),
             ],
           ),
 

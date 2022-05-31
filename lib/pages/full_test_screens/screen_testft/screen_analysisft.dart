@@ -1,16 +1,17 @@
-import 'package:diagnose/pages/test_screens/diagnose_8.dart';
+
+import 'package:diagnose/pages/full_test_screens/screen_testft/mobileft.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Mobilepercent extends StatefulWidget {
-  const Mobilepercent({Key? key}) : super(key: key);
+class ScreenAnalysisFT extends StatefulWidget {
+  const ScreenAnalysisFT({Key? key}) : super(key: key);
 
   @override
-  State<Mobilepercent> createState() => _MobilepercentState();
+  State<ScreenAnalysisFT> createState() => _ScreenAnalysisFTState();
 }
 
-class _MobilepercentState extends State<Mobilepercent> {
+class _ScreenAnalysisFTState extends State<ScreenAnalysisFT> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -21,12 +22,12 @@ class _MobilepercentState extends State<Mobilepercent> {
       body: Container(
         width: width,
         height: height,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromRGBO(29, 191, 115, 1),
+                const Color.fromRGBO(29, 191, 115, 1),
                 Color.fromRGBO(0, 172, 238, 1)
               ]),
         ),
@@ -35,10 +36,10 @@ class _MobilepercentState extends State<Mobilepercent> {
             SizedBox(
               height: height * 0.08,
             ),
-            Text(
-              '3/8',
+            const Text(
+              '1/6',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 12,
@@ -58,7 +59,7 @@ class _MobilepercentState extends State<Mobilepercent> {
                 Container(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
-                    value: 0.3,
+                    value: 0.1,
                     backgroundColor: Colors.white.withOpacity(0.5),
                     valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
@@ -66,21 +67,67 @@ class _MobilepercentState extends State<Mobilepercent> {
               ],
             ),
             SizedBox(
-              height: height * 0.03,
+              height: height * 0.02,
+            ),
+            const Text(
+              'Screen Testing',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Roboto',
+                  fontSize: 25,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+            SizedBox(
+              height: height * 0.008,
             ),
             Container(
-              width: width * 0.64,
-              height: height * 0.7,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(
-                      'assets/screen.png',
-                    ),
+              width: width * 0.6,
+              height: height * 0.3,
+              decoration: const BoxDecoration(
+                image: const DecorationImage(
+                    image: const AssetImage('assets/Gif/screenTest.gif'),
                     fit: BoxFit.fill),
               ),
             ),
             SizedBox(
-              height: height * 0.006,
+              height: height * 0.02,
+            ),
+            const Text(
+              'Screen Analysis',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Roboto',
+                  fontSize: 35,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+            SizedBox(
+              height: height * 0.008,
+            ),
+            const Text(
+              'This test check your screen  sensitivity\n and working.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Advent Pro',
+                  fontSize: 16,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+            SizedBox(
+              height: height * 0.17,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -99,14 +146,14 @@ class _MobilepercentState extends State<Mobilepercent> {
                     Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
-                          reverseDuration: const Duration(microseconds: 1),
-                          duration: const Duration(microseconds: 1),
-                          child: Screentouch()),
+                          type: PageTransitionType.fade,
+                          reverseDuration: const Duration(seconds: 1),
+                          duration: const Duration(seconds: 1),
+                          child: MobilepercentFT()),
                     );
                   },
                   child: const Text(
-                    "Okay",
+                    "Start",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       letterSpacing: 2,

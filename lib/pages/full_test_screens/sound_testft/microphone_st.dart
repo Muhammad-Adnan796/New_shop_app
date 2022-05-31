@@ -1,17 +1,17 @@
-import 'package:diagnose/pages/test_screens/ohno_earp.dart';
-import 'package:diagnose/pages/test_screens/ohno_microphone.dart';
+
+import 'package:diagnose/pages/full_test_screens/sound_testft/earphone_st.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Successfull2 extends StatefulWidget {
-  const Successfull2({Key? key}) : super(key: key);
+class MicrophoneST extends StatefulWidget {
+  const MicrophoneST({Key? key}) : super(key: key);
 
   @override
-  State<Successfull2> createState() => _Successfull2State();
+  State<MicrophoneST> createState() => _MicrophoneSTState();
 }
 
-class _Successfull2State extends State<Successfull2> {
+class _MicrophoneSTState extends State<MicrophoneST> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -35,7 +35,7 @@ class _Successfull2State extends State<Successfull2> {
             height: height * 0.08,
           ),
           Text(
-            '4/8',
+            '2/6',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
@@ -57,7 +57,7 @@ class _Successfull2State extends State<Successfull2> {
               Container(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
-                  value: 0.4,
+                  value: 0.2,
                   backgroundColor: Colors.white.withOpacity(0.5),
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
@@ -65,21 +65,24 @@ class _Successfull2State extends State<Successfull2> {
             ],
           ),
           SizedBox(
-            height: height * 0.05,
+            height: height * 0.1,
           ),
           Container(
-            width: width * 0.6,
-            height: height * 0.25,
+            width: width * 0.4,
+            height: height * 0.3,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/Gif/okay.gif'), fit: BoxFit.fill),
+                  image: AssetImage(
+                    'assets/Gif/microphone.gif',
+                  ),
+                  fit: BoxFit.fill),
             ),
           ),
           SizedBox(
-            height: height * 0.01,
+            height: height * 0.03,
           ),
           Text(
-            'Successfully',
+            'Microphone',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -91,11 +94,8 @@ class _Successfull2State extends State<Successfull2> {
                 fontWeight: FontWeight.normal,
                 height: 1),
           ),
-          SizedBox(
-            height: height * 0.03,
-          ),
           Text(
-            'Your Screen Touch is working.',
+            'This your microphones by saying\n“ Hello ” clearly into your phone.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -108,30 +108,7 @@ class _Successfull2State extends State<Successfull2> {
                 height: 1),
           ),
           SizedBox(
-            height: height * 0.24,
-          ),
-          Text.rich(
-            TextSpan(
-              // with no TextStyle it will have default text style
-              text: 'Next is ',
-              style: TextStyle(
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontFamily: 'Advent Pro'),
-              children: <TextSpan>[
-                TextSpan(
-                    text: 'Microphone ',
-                    style: TextStyle(fontSize: 15, fontFamily: 'Roboto')),
-                TextSpan(
-                    text: 'test',
-                    style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontFamily: 'Advent Pro')),
-              ],
-            ),
+            height: height * 0.15,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -150,15 +127,15 @@ class _Successfull2State extends State<Successfull2> {
                   Navigator.push(
                     context,
                     PageTransition(
-                      type: PageTransitionType.fade,
-                      reverseDuration: const Duration(microseconds: 1),
-                      duration: const Duration(microseconds: 1),
-                      child: const OhnoEarPiece(),
+                      type: PageTransitionType.rightToLeft,
+                      reverseDuration: const Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
+                      child: const EarPieceST(),
                     ),
                   );
                 },
                 child: const Text(
-                  "Next",
+                  "Ok",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     letterSpacing: 2,
@@ -171,6 +148,28 @@ class _Successfull2State extends State<Successfull2> {
               ),
             ),
           ),
+          SizedBox(
+            height: height * 0.005,
+          ),
+          GestureDetector(
+            // onTap: () {
+            //   Navigator.pushReplacement(context,
+            //       MaterialPageRoute(builder: (context) => OhnoEarPiece()));
+            // },
+            child: Text(
+              'Again',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Advent Pro',
+                  fontSize: 25,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+          )
         ],
       ),
     );

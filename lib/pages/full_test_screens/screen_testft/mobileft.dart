@@ -1,23 +1,24 @@
-import 'package:diagnose/pages/test_screens/succesfully.dart';
+
+import 'package:diagnose/pages/full_test_screens/screen_testft/BoxesFt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:pin_code_text_field/pin_code_text_field.dart';
 
-class HEadphone1 extends StatefulWidget {
-  const HEadphone1({Key? key}) : super(key: key);
+class MobilepercentFT extends StatefulWidget {
+  const MobilepercentFT({Key? key}) : super(key: key);
+
   @override
-  State<HEadphone1> createState() => _HEadphone1State();
+  State<MobilepercentFT> createState() => _MobilepercentFTState();
 }
 
-class _HEadphone1State extends State<HEadphone1> {
+class _MobilepercentFTState extends State<MobilepercentFT> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     // Figma Flutter Generator Diagose1Widget - FRAME
+
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: Container(
         width: width,
         height: height,
@@ -36,7 +37,7 @@ class _HEadphone1State extends State<HEadphone1> {
               height: height * 0.08,
             ),
             Text(
-              '2/8',
+              '3/8',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -58,7 +59,7 @@ class _HEadphone1State extends State<HEadphone1> {
                 Container(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
-                    value: 0.2,
+                    value: 0.3,
                     backgroundColor: Colors.white.withOpacity(0.5),
                     valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
@@ -66,87 +67,22 @@ class _HEadphone1State extends State<HEadphone1> {
               ],
             ),
             SizedBox(
-              height: height * 0.03,
+              height: height * 0.02,
             ),
             Container(
-              width: width * 0.6,
-              height: height * 0.3,
+              width: width * 0.64,
+              height: height * 0.66,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/Gif/HeadPhone.gif'),
+                    image: AssetImage(
+                      'assets/screen.png',
+                    ),
                     fit: BoxFit.fill),
               ),
             ),
-            SizedBox(
-              height: height * 0.03,
-            ),
             Padding(
               padding:
-                  const EdgeInsets.only(left: 8, right: 8, bottom: 5, top: 5),
-              child: Text(
-                'Listen to the numbers',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontFamily: 'Roboto',
-                    fontSize: 35,
-                    decoration: TextDecoration.none,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              ),
-            ),
-            Text(
-              'Just enter the number what yo listen\nand right in box',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color.fromRGBO(255, 255, 255, 1),
-                fontFamily: 'Advent Pro',
-                fontSize: 16,
-                decoration: TextDecoration.none,
-                letterSpacing:
-                    0 /*percentages not used in flutter. defaulting to zero*/,
-                fontWeight: FontWeight.normal,
-                height: 1,
-              ),
-            ),
-            SizedBox(
-              height: height * 0.01,
-            ),
-            Container(
-              child: SingleChildScrollView(
-                child: PinCodeTextField(
-                  highlight: true,
-                  highlightColor: Colors.black,
-                  defaultBorderColor: Colors.black,
-                  hasTextBorderColor: Colors.white,
-                  highlightPinBoxColor: Colors.white,
-                  maxLength: 4,
-                  onTextChanged: (text) {
-                    setState(() {});
-                  },
-                  onDone: (text) {},
-                  pinBoxWidth: 50,
-                  pinBoxHeight: 64,
-                  hasUnderline: true,
-                  wrapAlignment: WrapAlignment.spaceAround,
-                  pinBoxDecoration:
-                      ProvidedPinBoxDecoration.defaultPinBoxDecoration,
-                  pinTextStyle: TextStyle(fontSize: 22.0),
-                  pinTextAnimatedSwitcherTransition:
-                      ProvidedPinBoxTextAnimation.scalingTransition,
-                  pinTextAnimatedSwitcherDuration: Duration(milliseconds: 300),
-                  highlightAnimationBeginColor: Colors.black,
-                  highlightAnimationEndColor: Colors.white12,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: height * 0.1,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+                  const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 0),
               child: SizedBox(
                 width: width * 0.6,
                 height: height * 0.07,
@@ -162,15 +98,14 @@ class _HEadphone1State extends State<HEadphone1> {
                     Navigator.push(
                       context,
                       PageTransition(
-                        type: PageTransitionType.rightToLeft,
-                        reverseDuration: const Duration(microseconds: 1),
-                        duration: const Duration(microseconds: 1),
-                        child: const Successfull(),
-                      ),
+                          type: PageTransitionType.rightToLeft,
+                          reverseDuration: const Duration(seconds: 1),
+                          duration: const Duration(seconds: 1),
+                          child: BoxesFT()),
                     );
                   },
                   child: const Text(
-                    "Ok",
+                    "Okay",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       letterSpacing: 2,
@@ -189,12 +124,12 @@ class _HEadphone1State extends State<HEadphone1> {
             GestureDetector(
               // onTap: () {
               //   Navigator.pushReplacement(context,
-              //       MaterialPageRoute(builder: (context) => Screen1()));
+              //       MaterialPageRoute(builder: (context) => const ScreenAnalysis(),),);
               // },
-              child: Text(
+              child: const Text(
                 'Skip',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Color.fromRGBO(255, 255, 255, 1),
                     fontFamily: 'Advent Pro',
                     fontSize: 25,

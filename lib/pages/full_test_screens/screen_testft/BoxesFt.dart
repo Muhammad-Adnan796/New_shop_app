@@ -1,15 +1,15 @@
-import 'package:diagnose/pages/test_screens/successfully2.dart';
+import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 
 
-class Boxes extends StatefulWidget {
+class BoxesFT extends StatefulWidget {
   @override
-  _BoxesState createState() => _BoxesState();
+  _BoxesFTState createState() => _BoxesFTState();
 }
 
-class _BoxesState extends State<Boxes> {
+class _BoxesFTState extends State<BoxesFT> {
   bool click = true;
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class _BoxesState extends State<Boxes> {
                                     type: PageTransitionType.rightToLeft,
                                     reverseDuration: Duration(seconds: 1),
                                     duration: Duration(seconds: 1),
-                                    child: Successfull2(),),);
+                                    child: SountTestST(),),);
                           },
                           child: Container(
                             height: 50,

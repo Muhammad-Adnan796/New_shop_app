@@ -1,16 +1,17 @@
-import 'package:diagnose/pages/test_screens/screen_analysis.dart';
+
+import 'package:diagnose/pages/quick_test_screens/front_camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Successfull extends StatefulWidget {
-  const Successfull({Key? key}) : super(key: key);
+class FrontCameraOpen extends StatefulWidget {
+  const FrontCameraOpen({Key? key}) : super(key: key);
 
   @override
-  State<Successfull> createState() => _SuccessfullState();
+  State<FrontCameraOpen> createState() => _FrontCameraOpenState();
 }
 
-class _SuccessfullState extends State<Successfull> {
+class _FrontCameraOpenState extends State<FrontCameraOpen> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -19,13 +20,13 @@ class _SuccessfullState extends State<Successfull> {
     return Container(
       width: width,
       height: height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
               Color.fromRGBO(29, 191, 115, 1),
-              Color.fromRGBO(0, 172, 238, 1)
+              const Color.fromRGBO(0, 172, 238, 1)
             ]),
       ),
       child: Column(
@@ -33,8 +34,8 @@ class _SuccessfullState extends State<Successfull> {
           SizedBox(
             height: height * 0.08,
           ),
-          Text(
-            '2/8',
+          const Text(
+            '8/8',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
@@ -54,9 +55,9 @@ class _SuccessfullState extends State<Successfull> {
                 width: width * 0.04,
               ),
               Container(
-                width: width * 0.7,
+                width: width * 0.8,
                 child: LinearProgressIndicator(
-                  value: 0.2,
+                  value: 1,
                   backgroundColor: Colors.white.withOpacity(0.5),
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
@@ -67,18 +68,19 @@ class _SuccessfullState extends State<Successfull> {
             height: height * 0.05,
           ),
           Container(
-            width: width * 0.6,
-            height: height * 0.25,
-            decoration: BoxDecoration(
+            width: width * 0.35,
+            height: height * 0.3,
+            decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/Gif/okay.gif'), fit: BoxFit.fill),
+                  image: AssetImage('assets/Gif/frontCame.gif'),
+                  fit: BoxFit.fill),
             ),
           ),
           SizedBox(
             height: height * 0.01,
           ),
-          Text(
-            'Successfully',
+          const Text(
+            'Front Camera',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -93,10 +95,10 @@ class _SuccessfullState extends State<Successfull> {
           SizedBox(
             height: height * 0.03,
           ),
-          Text(
-            'Your headphone  point is working.',
+          const Text(
+            'Keep the front-facing comera pointed\nat yourself until test is complete',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 16,
@@ -107,30 +109,7 @@ class _SuccessfullState extends State<Successfull> {
                 height: 1),
           ),
           SizedBox(
-            height: height * 0.24,
-          ),
-          Text.rich(
-            TextSpan(
-              // with no TextStyle it will have default text style
-              text: 'Next is ',
-              style: TextStyle(
-                  decoration: TextDecoration.none,
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontFamily: 'Advent Pro'),
-              children: <TextSpan>[
-                TextSpan(
-                    text: 'Screen ',
-                    style: TextStyle(fontSize: 15, fontFamily: 'Roboto')),
-                TextSpan(
-                    text: 'test',
-                    style: TextStyle(
-                        decoration: TextDecoration.none,
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontFamily: 'Advent Pro')),
-              ],
-            ),
+            height: height * 0.17,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -150,14 +129,14 @@ class _SuccessfullState extends State<Successfull> {
                     context,
                     PageTransition(
                       type: PageTransitionType.fade,
-                      reverseDuration: const Duration(microseconds: 1),
-                      duration: const Duration(microseconds: 1),
-                      child: const ScreenAnalysis(),
+                      reverseDuration: const Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
+                      child: const FrontCamera(),
                     ),
                   );
                 },
                 child: const Text(
-                  "Next",
+                  "Open",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     letterSpacing: 2,
@@ -170,6 +149,28 @@ class _SuccessfullState extends State<Successfull> {
               ),
             ),
           ),
+          SizedBox(
+            height: height * 0.005,
+          ),
+          GestureDetector(
+            // onTap: () {
+            //   Navigator.pushReplacement(context,
+            //       MaterialPageRoute(builder: (context) => OhnoSettings()));
+            // },
+            child: const Text(
+              'Skip',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Advent Pro',
+                  fontSize: 25,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.normal,
+                  height: 1),
+            ),
+          )
         ],
       ),
     );

@@ -1,17 +1,16 @@
-
-import 'package:diagnose/pages/test_screens/microphone.dart';
+import 'package:diagnose/pages/quick_test_screens/ohno_earp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class OhnoEarPiece extends StatefulWidget {
-  const OhnoEarPiece({Key? key}) : super(key: key);
+class Successfull2 extends StatefulWidget {
+  const Successfull2({Key? key}) : super(key: key);
 
   @override
-  State<OhnoEarPiece> createState() => _OhnoEarPieceState();
+  State<Successfull2> createState() => _Successfull2State();
 }
 
-class _OhnoEarPieceState extends State<OhnoEarPiece> {
+class _Successfull2State extends State<Successfull2> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -65,24 +64,21 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
             ],
           ),
           SizedBox(
-            height: height * 0.15,
+            height: height * 0.05,
           ),
           Container(
-            width: width * 0.24,
-            height: height * 0.12,
+            width: width * 0.6,
+            height: height * 0.25,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(
-                    'assets/cross.gif',
-                  ),
-                  fit: BoxFit.fill),
+                  image: AssetImage('assets/Gif/okay.gif'), fit: BoxFit.fill),
             ),
           ),
           SizedBox(
-            height: height * 0.08,
+            height: height * 0.01,
           ),
           Text(
-            'Oh, no!',
+            'Successfully',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -94,8 +90,11 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
                 fontWeight: FontWeight.normal,
                 height: 1),
           ),
+          SizedBox(
+            height: height * 0.03,
+          ),
           Text(
-            'Make sure no Earpiece or\n any  other audio connected with your \nphone.',
+            'Your Screen Touch is working.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -108,7 +107,30 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
                 height: 1),
           ),
           SizedBox(
-            height: height * 0.19,
+            height: height * 0.24,
+          ),
+          Text.rich(
+            TextSpan(
+              // with no TextStyle it will have default text style
+              text: 'Next is ',
+              style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontFamily: 'Advent Pro'),
+              children: <TextSpan>[
+                TextSpan(
+                    text: 'Microphone ',
+                    style: TextStyle(fontSize: 15, fontFamily: 'Roboto')),
+                TextSpan(
+                    text: 'test',
+                    style: TextStyle(
+                        decoration: TextDecoration.none,
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontFamily: 'Advent Pro')),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -127,15 +149,15 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
                   Navigator.push(
                     context,
                     PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.fade,
                       reverseDuration: const Duration(microseconds: 1),
                       duration: const Duration(microseconds: 1),
-                      child: const Microphone(),
+                      child: const OhnoEarPiece(),
                     ),
                   );
                 },
                 child: const Text(
-                  "Try Again",
+                  "Next",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     letterSpacing: 2,
@@ -148,28 +170,6 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
               ),
             ),
           ),
-          SizedBox(
-            height: height * 0.005,
-          ),
-          GestureDetector(
-            // onTap: () {
-            //   Navigator.pushReplacement(context,
-            //       MaterialPageRoute(builder: (context) => Screen1()));
-            // },
-            child: Text(
-              'Skip',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1),
-                  fontFamily: 'Advent Pro',
-                  fontSize: 25,
-                  decoration: TextDecoration.none,
-                  letterSpacing:
-                      0 /*percentages not used in flutter. defaulting to zero*/,
-                  fontWeight: FontWeight.normal,
-                  height: 1),
-            ),
-          )
         ],
       ),
     );

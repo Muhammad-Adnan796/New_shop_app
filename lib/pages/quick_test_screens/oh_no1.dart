@@ -1,18 +1,18 @@
-import 'package:diagnose/pages/test_screens/headphone.dart';
-import 'package:diagnose/pages/test_screens/microphone.dart';
-import 'package:diagnose/pages/test_screens/ohno_earp.dart';
+
+import 'package:diagnose/pages/quick_test_screens/headphone.dart';
+import 'package:diagnose/pages/quick_test_screens/screen_analysis.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Ohno2 extends StatefulWidget {
-  const Ohno2({Key? key}) : super(key: key);
+class OhNo1headphone extends StatefulWidget {
+  const OhNo1headphone({Key? key}) : super(key: key);
 
   @override
-  State<Ohno2> createState() => _Ohno2State();
+  State<OhNo1headphone> createState() => _OhNo1headphoneState();
 }
 
-class _Ohno2State extends State<Ohno2> {
+class _OhNo1headphoneState extends State<OhNo1headphone> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -21,7 +21,7 @@ class _Ohno2State extends State<Ohno2> {
     return Container(
       width: width,
       height: height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
@@ -35,10 +35,10 @@ class _Ohno2State extends State<Ohno2> {
           SizedBox(
             height: height * 0.08,
           ),
-          Text(
-            '4/8',
+          const Text(
+            '2/8',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
               fontFamily: 'Roboto',
               fontSize: 12,
@@ -58,7 +58,7 @@ class _Ohno2State extends State<Ohno2> {
               Container(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
-                  value: 0.4,
+                  value: 0.2,
                   backgroundColor: Colors.white.withOpacity(0.5),
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
@@ -71,8 +71,8 @@ class _Ohno2State extends State<Ohno2> {
           Container(
             width: width * 0.24,
             height: height * 0.12,
-            decoration: BoxDecoration(
-              image: DecorationImage(
+            decoration: const BoxDecoration(
+              image: const DecorationImage(
                   image: AssetImage(
                     'assets/cross.gif',
                   ),
@@ -82,10 +82,10 @@ class _Ohno2State extends State<Ohno2> {
           SizedBox(
             height: height * 0.08,
           ),
-          Text(
+          const Text(
             'Oh, no!',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 35,
@@ -95,8 +95,8 @@ class _Ohno2State extends State<Ohno2> {
                 fontWeight: FontWeight.normal,
                 height: 1),
           ),
-          Text(
-            'Make sure no microphone or\n any  otheraudio cables are \n plugged into yourphone.',
+          const Text(
+            'Make sure no headphones or\n any  otheraudio cables are \n plugged into yourphone.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -128,10 +128,10 @@ class _Ohno2State extends State<Ohno2> {
                   Navigator.push(
                     context,
                     PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.fade,
                       reverseDuration: const Duration(microseconds: 1),
                       duration: const Duration(microseconds: 1),
-                      child: const Microphone(),
+                      child: const HEadphone1(),
                     ),
                   );
                 },
@@ -155,12 +155,12 @@ class _Ohno2State extends State<Ohno2> {
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => OhnoEarPiece()));
+                  MaterialPageRoute(builder: (context) => const ScreenAnalysis(),),);
             },
-            child: Text(
+            child: const Text(
               'Skip',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,

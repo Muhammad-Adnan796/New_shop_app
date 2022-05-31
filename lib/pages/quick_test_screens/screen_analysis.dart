@@ -1,5 +1,5 @@
-import 'package:diagnose/pages/test_screens/mobile.dart';
-import 'package:diagnose/pages/test_screens/diagnose_8.dart';
+import 'package:diagnose/pages/quick_test_screens/mobile.dart';
+import 'package:diagnose/pages/quick_test_screens/touch_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -21,12 +21,12 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
     return Container(
       width: width,
       height: height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
-              Color.fromRGBO(29, 191, 115, 1),
+              const Color.fromRGBO(29, 191, 115, 1),
               Color.fromRGBO(0, 172, 238, 1)
             ]),
       ),
@@ -35,10 +35,10 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
           SizedBox(
             height: height * 0.08,
           ),
-          Text(
+          const Text(
             '3/8',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
               fontFamily: 'Roboto',
               fontSize: 12,
@@ -73,9 +73,9 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
               Container(
                 width: width * 0.6,
                 height: height * 0.3,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/Gif/mobile.gif'),
+                decoration: const BoxDecoration(
+                  image: const DecorationImage(
+                      image: const AssetImage('assets/Gif/mobile.gif'),
                       fit: BoxFit.fill),
                 ),
               ),
@@ -84,9 +84,9 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                 child: Container(
                   width: width * 0.2,
                   height: height * 0.2,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/Gif/Cracked.gif'),
+                  decoration: const BoxDecoration(
+                    image: const DecorationImage(
+                        image: const AssetImage('assets/Gif/Cracked.gif'),
                         fit: BoxFit.fill),
                   ),
                 ),
@@ -96,7 +96,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
           SizedBox(
             height: height * 0.02,
           ),
-          Text(
+          const Text(
             'Screen Analysis',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -112,7 +112,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
           SizedBox(
             height: height * 0.008,
           ),
-          Text(
+          const Text(
             'This test check your screen  sensitivity\n and working.',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -149,16 +149,16 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                         reverseDuration: const Duration(microseconds: 1),
                         duration: const Duration(microseconds: 1),
                         child: SimpleDialog(
-                          insetPadding: EdgeInsets.all(100),
+                          insetPadding: const EdgeInsets.all(100),
                           children: [
                             Container(
                               height: height * 0.1,
                               width: width * 0.2,
                               child: Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Screen cracked ?",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 15,
                                     ),
                                   ),
@@ -176,13 +176,13 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                                               type: PageTransitionType.fade,
                                               reverseDuration:
                                                   const Duration(seconds: 1),
-                                              duration:
-                                                  const Duration(seconds: 1),
-                                              child: Mobilepercent(),
+                                              duration: const Duration(
+                                                  milliseconds: 500),
+                                              child: const Mobilepercent(),
                                             ),
                                           );
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "Yes",
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
@@ -210,14 +210,14 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                                                   const Duration(seconds: 1),
                                               duration:
                                                   const Duration(seconds: 1),
-                                              child: Screentouch(),
+                                              child: const Screentouch(),
                                             ),
                                           );
                                         },
-                                        child: Text(
+                                        child: const Text(
                                           "No",
                                           textAlign: TextAlign.center,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colors.green,
                                               fontFamily: 'Advent Pro',
                                               fontSize: 25,
@@ -259,10 +259,10 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
             //   Navigator.pushReplacement(context,
             //       MaterialPageRoute(builder: (context) => Screen1()));
             // },
-            child: Text(
+            child: const Text(
               'Skip',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,
