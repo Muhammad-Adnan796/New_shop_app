@@ -139,59 +139,62 @@ class _SountTestSTState extends State<SountTestST> {
                   SizedBox(
                     width: width * 0.176,
                   ),
-                  Column(
-                    children: [
-                      Container(
-                        height: height * 0.074,
-                        width: width * 0.15,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            "assets/Sound.png",
-                            height: height * 0.05,
-                            width: width * 0.08,
+                  Padding(
+                       padding: const EdgeInsets.only(bottom: 12),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: height * 0.074,
+                          width: width * 0.15,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              "assets/Sound.png",
+                              height: height * 0.05,
+                              width: width * 0.08,
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue),
+                            boxShadow: [
+                              BoxShadow(
+                                blurRadius: 4,
+                                color: Colors.grey.withOpacity(0.7),
+                                spreadRadius: 2,
+                              )
+                            ],
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50),
                           ),
                         ),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue),
-                          boxShadow: [
+                        SizedBox(
+                          height: height * 0.01,
+                        ),
+                        Text(
+                          "Sound",
+                          style: const TextStyle(
+                            fontFamily: "Advent Pro",
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                          height: height * 0.005,
+                        ),
+                        Container(
+                          height: height * 0.002,
+                          width: width * 0.13,
+                          decoration:
+                              BoxDecoration(color: Colors.white, boxShadow: [
                             BoxShadow(
-                              blurRadius: 4,
-                              color: Colors.grey.withOpacity(0.7),
-                              spreadRadius: 2,
+                              blurRadius: 1,
+                              color: Colors.grey,
                             )
-                          ],
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                      SizedBox(
-                        height: height * 0.01,
-                      ),
-                      Text(
-                        "Sound",
-                        style: const TextStyle(
-                          fontFamily: "Advent Pro",
-                          fontSize: 15,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(
-                        height: height * 0.005,
-                      ),
-                      Container(
-                        height: height * 0.002,
-                        width: width * 0.13,
-                        decoration:
-                            BoxDecoration(color: Colors.white, boxShadow: [
-                          BoxShadow(
-                            blurRadius: 1,
-                            color: Colors.grey,
-                          )
-                        ]),
-                      )
-                    ],
+                          ]),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     width: width * 0.176,

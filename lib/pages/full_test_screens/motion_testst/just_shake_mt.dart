@@ -18,16 +18,97 @@ class _JustShakeMTState extends State<JustShakeMT> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     // Figma Flutter Generator Diagose1Widget - FRAME
+
+    //
+    Widget placementContainer(String name, double width1) {
+      return Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 2),
+            child: Text(
+              name,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  shadows: [
+                    Shadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 1,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                  wordSpacing: 20,
+                  color: const Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Advent Pro',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  height: 1),
+            ),
+          ),
+          Container(
+            height: height * 0.005,
+            width: width * width1,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 1,
+                  spreadRadius: 1,
+                  offset: const Offset(0, 2),
+                )
+              ],
+              color: Colors.white,
+            ),
+          )
+        ],
+      );
+    }
+
+    Widget lettercounting(String title, String percentage) {
+      return Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(4),
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                  color: const Color.fromRGBO(255, 255, 255, 1),
+                  fontFamily: 'Advent Pro',
+                  fontSize: 12,
+                  decoration: TextDecoration.none,
+                  letterSpacing:
+                      0 /*percentages not used in flutter. defaulting to zero*/,
+                  fontWeight: FontWeight.w700,
+                  height: 1),
+            ),
+          ),
+          Text(
+            percentage,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                color: const Color.fromRGBO(255, 255, 255, 1),
+                fontFamily: 'Advent Pro',
+                fontSize: 12,
+                decoration: TextDecoration.none,
+                letterSpacing:
+                    0 /*percentages not used in flutter. defaulting to zero*/,
+                fontWeight: FontWeight.normal,
+                height: 1),
+          ),
+        ],
+      );
+    }
+
     return Scaffold(
       body: Container(
         width: width,
         height: height,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromRGBO(29, 191, 115, 1),
+                const Color.fromRGBO(29, 191, 115, 1),
                 Color.fromRGBO(0, 172, 238, 1)
               ]),
         ),
@@ -36,7 +117,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
             SizedBox(
               height: height * 0.08,
             ),
-            Text(
+            const Text(
               '3/8',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -72,7 +153,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
             Container(
               width: width * 0.6,
               height: height * 0.25,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
                         'assets/shake-phone-icon-19-removebg-preview.png'),
@@ -82,10 +163,10 @@ class _JustShakeMTState extends State<JustShakeMT> {
             SizedBox(
               height: height * 0.01,
             ),
-            Text(
+            const Text(
               'Just shake',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Roboto',
                   fontSize: 35,
@@ -98,11 +179,11 @@ class _JustShakeMTState extends State<JustShakeMT> {
             SizedBox(
               height: height * 0.01,
             ),
-            Text(
+            const Text(
               'All mothion test',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1),
+              style: const TextStyle(
+                  color: const Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 12,
                   decoration: TextDecoration.none,
@@ -111,154 +192,152 @@ class _JustShakeMTState extends State<JustShakeMT> {
                   fontWeight: FontWeight.normal,
                   height: 1),
             ),
-
-            Container(
-                width: 260,
-                height: 31,
-                child: Stack(children: <Widget>[
-                  Positioned(
-                      top: 3,
-                      left: 136,
-                      child: Text(
-                        'x',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 0,
-                      left: 186,
-                      child: Text(
-                        'y',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 3,
-                      left: 236,
-                      child: Text(
-                        'z',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  SizedBox(
-                    height: height * 0.005,
+            SizedBox(
+              height: height * 0.03,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: placementContainer("Accelerometer", 0.3),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("x", "312.93823"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("y", "312.93823"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("z", "312.93823"),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 9,
+                    top: 8,
+                    right: 39,
+                    bottom: 8,
                   ),
-                  Container(
-                    height: height * 0.002,
-                    width: width * 0.13,
-                    decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                      BoxShadow(
-                        blurRadius: 1,
-                        color: Colors.grey,
-                      )
-                    ]),
+                  child: placementContainer("Garoscope", 0.21),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("x", "312.93823"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("y", "312.93823"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: lettercounting("z", "312.93823"),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    top: 8,
+                    right: 58,
+                    bottom: 8,
                   ),
-                  Positioned(
-                      top: 10,
-                      left: 0,
-                      child: Text(
-                        'Accelerometer',
+                  child: placementContainer("Location", 0.17),
+                ),
+                const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: const Text(
+                      'N',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontFamily: 'Advent Pro',
+                          fontSize: 12,
+                          decoration: TextDecoration.none,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.w700,
+                          height: 1),
+                    )),
+                SizedBox(
+                  width: width * 0.08,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: Stack(
+                    children: [
+                      const Text(
+                        'E',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 17,
-                      left: 219,
-                      child: Text(
-                        '312.93823',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 16,
-                      left: 169,
-                      child: Text(
-                        '312.93823',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 17,
-                      left: 119,
-                      child: Text(
-                        '312.93823',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            fontFamily: 'Advent Pro',
-                            fontSize: 12,
-                            decoration: TextDecoration.none,
-                            letterSpacing:
-                                0 /*percentages not used in flutter. defaulting to zero*/,
-                            fontWeight: FontWeight.normal,
-                            height: 1),
-                      )),
-                  Positioned(
-                      top: 31,
-                      left: 0,
-                      child: Transform.rotate(
-                        angle: 0.5405101961915405 * (math.pi / 180),
-                        child: Divider(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            thickness: 2),
-                      )),
-                ])),
-
-            // SizedBox(
-            //   height: height * 0.03,
-            // ),
-            // SizedBox(
-            //   height: height * 0.24,
-            // ),
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontFamily: 'Advent Pro',
+                          fontSize: 12,
+                          decoration: TextDecoration.none,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.w700,
+                          height: 1,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: width * 0.1,
+                ),
+                const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: const Text(
+                      'W',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontFamily: 'Advent Pro',
+                          fontSize: 12,
+                          decoration: TextDecoration.none,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.w700,
+                          height: 1),
+                    )),
+                SizedBox(
+                  width: width * 0.1,
+                ),
+                const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: const Text(
+                      'S',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontFamily: 'Advent Pro',
+                          fontSize: 12,
+                          decoration: TextDecoration.none,
+                          letterSpacing:
+                              0 /*percentages not used in flutter. defaulting to zero*/,
+                          fontWeight: FontWeight.w700,
+                          height: 1),
+                    )),
+              ],
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                width: width * 0.6,
+                width: width * 0.7,
                 height: height * 0.07,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(

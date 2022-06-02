@@ -1,5 +1,5 @@
 import 'package:diagnose/pages/quick_test_screens/earpiece.dart';
-import 'package:diagnose/pages/quick_test_screens/success_wifi.dart';
+import 'package:diagnose/pages/quick_test_screens/ohno_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -154,9 +154,11 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SuccessfullWifi()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const OhnoSettings(),
+                ),
+              );
             },
             child: const Text(
               'Skip',

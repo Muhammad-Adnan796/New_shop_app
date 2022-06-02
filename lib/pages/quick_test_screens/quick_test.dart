@@ -1,16 +1,16 @@
-
+import 'package:diagnose/pages/quick_test_screens/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Diagnose1 extends StatefulWidget {
-  const Diagnose1({Key? key}) : super(key: key);
+class QuickTest extends StatefulWidget {
+  const QuickTest({Key? key}) : super(key: key);
 
   @override
-  State<Diagnose1> createState() => _Diagnose1State();
+  State<QuickTest> createState() => _QuickTestState();
 }
 
-class _Diagnose1State extends State<Diagnose1> {
+class _QuickTestState extends State<QuickTest> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -150,7 +150,7 @@ class _Diagnose1State extends State<Diagnose1> {
                       type: PageTransitionType.fade,
                       reverseDuration: const Duration(microseconds: 1),
                       duration: const Duration(microseconds: 1),
-                      child: const Diagnose1(),
+                      child: const LoadingQuickTest(),
                     ),
                   );
                 },

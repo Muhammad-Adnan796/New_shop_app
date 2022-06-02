@@ -1,4 +1,5 @@
 import 'package:diagnose/pages/quick_test_screens/ohno_earp.dart';
+import 'package:diagnose/pages/quick_test_screens/ohno_microphone.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -34,7 +35,7 @@ class _Successfull2State extends State<Successfull2> {
             height: height * 0.08,
           ),
           Text(
-            '4/8',
+            '3/8',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
@@ -56,9 +57,9 @@ class _Successfull2State extends State<Successfull2> {
               Container(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
-                  value: 0.4,
+                  value: 0.3,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],

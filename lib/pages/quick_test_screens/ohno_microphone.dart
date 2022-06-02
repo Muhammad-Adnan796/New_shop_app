@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Ohno2 extends StatefulWidget {
-  const Ohno2({Key? key}) : super(key: key);
+class OhnoMicrophone extends StatefulWidget {
+  const OhnoMicrophone({Key? key}) : super(key: key);
 
   @override
-  State<Ohno2> createState() => _Ohno2State();
+  State<OhnoMicrophone> createState() => _OhnoMicrophoneState();
 }
 
-class _Ohno2State extends State<Ohno2> {
+class _OhnoMicrophoneState extends State<OhnoMicrophone> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -155,9 +155,9 @@ class _Ohno2State extends State<Ohno2> {
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => OhnoEarPiece()));
+                  MaterialPageRoute(builder: (context) => const OhnoEarPiece(),),);
             },
-            child: Text(
+            child: const Text(
               'Skip',
               textAlign: TextAlign.center,
               style: TextStyle(

@@ -1,6 +1,5 @@
 //  bottom nav bar widgets
-
-import 'package:diagnose/widgets/grediant_icon.dart';
+import 'package:diagnose/navbar/grediant_icon.dart';
 import 'package:flutter/material.dart';
 
 class NaviBar extends StatefulWidget {
@@ -20,8 +19,8 @@ class _NaviBarState extends State<NaviBar> {
       return Padding(
         padding: const EdgeInsets.only(left: 150, top: 10),
         child: Container(
-          width: width * 0.18,
-          height: height * 0.09,
+          width: width * 0.16,
+          height: height * 0.08,
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0),
             boxShadow: [
@@ -68,7 +67,7 @@ class _NaviBarState extends State<NaviBar> {
           padding: const EdgeInsets.only(top: 34),
           child: Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.08,
+            height: MediaQuery.of(context).size.height * 0.06,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(

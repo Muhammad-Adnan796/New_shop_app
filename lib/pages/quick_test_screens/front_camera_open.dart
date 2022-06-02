@@ -1,4 +1,4 @@
-
+import 'package:diagnose/pages/quick_test_screens/back_camera_open.dart';
 import 'package:diagnose/pages/quick_test_screens/front_camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -153,10 +153,14 @@ class _FrontCameraOpenState extends State<FrontCameraOpen> {
             height: height * 0.005,
           ),
           GestureDetector(
-            // onTap: () {
-            //   Navigator.pushReplacement(context,
-            //       MaterialPageRoute(builder: (context) => OhnoSettings()));
-            // },
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BackCameraOpne(),
+                ),
+              );
+            },
             child: const Text(
               'Skip',
               textAlign: TextAlign.center,

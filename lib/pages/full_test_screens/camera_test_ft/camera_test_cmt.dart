@@ -1,3 +1,5 @@
+import 'package:diagnose/pages/full_test_screens/camera_test_ft/fontcam_ht.dart';
+import 'package:diagnose/pages/full_test_screens/camera_test_ft/frontcamopen.dart';
 import 'package:diagnose/pages/full_test_screens/connectivity_test_ft/connectivity_test_ct.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/motion_testst/just_shake_mt.dart';
@@ -331,7 +333,7 @@ class _CameraTestState extends State<CameraTest> {
                         type: PageTransitionType.fade,
                         reverseDuration: const Duration(seconds: 1),
                         duration: const Duration(seconds: 1),
-                        child: JustShakeMT(),
+                        child: FrontCameraOpenHT(),
                       ),
                     );
                   },

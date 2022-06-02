@@ -1,3 +1,4 @@
+import 'package:diagnose/pages/quick_test_screens/front_camera_open.dart';
 import 'package:diagnose/pages/quick_test_screens/ohno_settings.dart';
 import 'package:diagnose/pages/quick_test_screens/succes_speaker.dart';
 import 'package:flutter/material.dart';
@@ -189,8 +190,12 @@ class _SpeakerState extends State<Speaker> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => OhnoSettings()));
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FrontCameraOpen(),
+                  ),
+                );
               },
               child: Text(
                 'Skip',

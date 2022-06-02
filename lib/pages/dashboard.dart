@@ -1,3 +1,5 @@
+import 'package:diagnose/auth/login.dart';
+import 'package:diagnose/pages/backup_restor/connecting.dart';
 import 'package:diagnose/pages/categories.dart';
 import 'package:flutter/material.dart';
 
@@ -119,54 +121,64 @@ class _DashBoardState extends State<DashBoard> {
             SizedBox(
               height: height * 0.03,
             ),
-            Container(
-              height: height * 0.11,
-              width: width * 0.85,
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 10,
-                      color: Colors.grey,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
+              },
+              child: Container(
+                height: height * 0.11,
+                width: width * 0.85,
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 10,
+                        color: Colors.grey,
+                      )
+                    ],
+                    gradient: const LinearGradient(colors: [
+                      Color.fromRGBO(0, 172, 238, 10),
+                      const Color.fromRGBO(29, 191, 115, 1),
+                    ]),
+                    borderRadius: BorderRadius.circular(5)),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        "assets/apbarr.png",
+                        height: height * 0.13,
+                        width: width * 0.13,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Book your appointment",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xFFFFFFFF)),
+                        ),
+                        const Text(
+                          "Find nearest repair store with free quotation",
+                          style: TextStyle(
+                              fontFamily: "Roboto",
+                              fontSize: 9,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.black),
+                        ),
+                      ],
                     )
                   ],
-                  gradient: const LinearGradient(colors: [
-                    Color.fromRGBO(0, 172, 238, 10),
-                    const Color.fromRGBO(29, 191, 115, 1),
-                  ]),
-                  borderRadius: BorderRadius.circular(5)),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Image.asset(
-                      "assets/apbarr.png",
-                      height: height * 0.13,
-                      width: width * 0.13,
-                    ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Book your appointment",
-                        style: TextStyle(
-                            fontFamily: "Roboto",
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xFFFFFFFF)),
-                      ),
-                      const Text(
-                        "Find nearest repair store with free quotation",
-                        style: TextStyle(
-                            fontFamily: "Roboto",
-                            fontSize: 9,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.black),
-                      ),
-                    ],
-                  )
-                ],
+                ),
               ),
             ),
             SizedBox(
@@ -222,8 +234,18 @@ class _DashBoardState extends State<DashBoard> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                makDiv("assets/Icons/icon2.png", "Back Up & Restore",
-                    "You can transfer your data faster\nand sequre to PC or Phone"),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ConnectiongBK(),
+                      ),
+                    );
+                  },
+                  child: makDiv("assets/Icons/icon2.png", "Back Up & Restore",
+                      "You can transfer your data faster\nand sequre to PC or Phone"),
+                ),
                 SizedBox(
                   width: width * 0.082,
                 ),

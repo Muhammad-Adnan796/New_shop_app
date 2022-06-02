@@ -154,7 +154,7 @@ class _ScreentouchState extends State<Screentouch> {
             GestureDetector(
               onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => Ohno2()));
+                    MaterialPageRoute(builder: (context) => OhnoMicrophone()));
               },
               child: Text(
                 'Skip',

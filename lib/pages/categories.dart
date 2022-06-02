@@ -1,7 +1,7 @@
 
+import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
 import 'package:diagnose/pages/quick_test_screens/quick_test.dart';
-import 'package:diagnose/widgets/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -292,7 +292,7 @@ class _HomeState extends State<Home> {
                         type: PageTransitionType.leftToRight,
                         reverseDuration: Duration(seconds: 1),
                         duration: Duration(seconds: 1),
-                        child: Diagnose1(),
+                        child: QuickTest(),
                       ),
                     );
                   },

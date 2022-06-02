@@ -12,12 +12,12 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
-   @override
+  @override
   void initState() {
     super.initState();
 
     Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
+      Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Intro()
               // TabsPage()

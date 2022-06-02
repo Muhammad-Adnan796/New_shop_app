@@ -1,4 +1,5 @@
 import 'package:diagnose/pages/full_test_screens/camera_test_ft/camera_test_cmt.dart';
+import 'package:diagnose/pages/full_test_screens/connectivity_test_ft/bluetooth.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/motion_testst/just_shake_mt.dart';
 import 'package:diagnose/pages/full_test_screens/motion_testst/motion_test_mt.dart';
@@ -329,9 +330,7 @@ class _ConnectivityTestState extends State<ConnectivityTest> {
                           type: PageTransitionType.fade,
                           reverseDuration: const Duration(seconds: 1),
                           duration: const Duration(seconds: 1),
-                          child: CameraTest()
-                          // JustShakeMT(),
-                          ),
+                          child: Bluetooth()),
                     );
                   },
                   child: const Text(
