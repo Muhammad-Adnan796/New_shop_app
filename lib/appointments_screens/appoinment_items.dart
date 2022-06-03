@@ -1,6 +1,8 @@
-import 'package:diagnose/appointments_screens/appionment.dart';
+import 'package:diagnose/appointments_screens/Book_appionment.dart';
 import 'package:diagnose/appointments_screens/appoinment_data.dart';
+import 'package:diagnose/appointments_screens/appoinment_location.dart';
 import 'package:diagnose/appointments_screens/appoinments_modal_class.dart';
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/responsive_ui.dart';
 import 'package:flutter/material.dart';
@@ -78,6 +80,7 @@ class _AppointmentsItemAState extends State<AppointmentsItemA> {
     double mediaQueryHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(30.h),
@@ -100,13 +103,17 @@ class _AppointmentsItemAState extends State<AppointmentsItemA> {
                 height: mediaQueryHeight * 0.04,
                 width: mediaQueryWidth * 0.9,
               )),
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.apps_rounded,
+           leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
               color: Colors.black,
             ),
-          ),
+          );
+        }),
           backgroundColor: Colors.white,
         ),
       ),
@@ -129,7 +136,14 @@ class _AppointmentsItemAState extends State<AppointmentsItemA> {
                           color: const Color(0xFF223263)),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AppoinmentLocation(),
+                          ),
+                        );
+                      },
                       child: Row(
                         children: [
                           Padding(
@@ -165,7 +179,9 @@ class _AppointmentsItemAState extends State<AppointmentsItemA> {
                     width: mediaQueryWidth * 1,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.r),
-                        border: Border.all()),
+                        border: Border.all(
+                          color: Color(0xFFACB8C2),
+                        )),
                     child: Center(
                       child: TextFormField(
                         autocorrect: true,

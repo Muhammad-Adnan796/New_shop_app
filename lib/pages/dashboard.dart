@@ -1,7 +1,11 @@
 import 'package:diagnose/auth/login.dart';
+import 'package:diagnose/drawer.dart';
+import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/backup_restor/connecting.dart';
 import 'package:diagnose/pages/categories.dart';
+import 'package:diagnose/pages/settings.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -18,7 +22,7 @@ class _DashBoardState extends State<DashBoard> {
 
     Widget makDiv(String image, String title, String description) {
       return Container(
-        height: height * 0.2,
+        height: height * 0.19,
         width: width * 0.38,
         decoration: BoxDecoration(
           boxShadow: [
@@ -63,6 +67,8 @@ class _DashBoardState extends State<DashBoard> {
     }
 
     return Scaffold(
+      drawer: MyDrawer(),
+      bottomNavigationBar: const NaviBar(),
       appBar: AppBar(
         title: Image.asset(
           "assets/Near_repair_Type_II-removebg-preview.png",
@@ -75,10 +81,9 @@ class _DashBoardState extends State<DashBoard> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.apps,
               color: Colors.black,
-              size: 30,
             ),
           );
         }),
@@ -95,13 +100,15 @@ class _DashBoardState extends State<DashBoard> {
             padding: const EdgeInsets.only(right: 15.0),
             child: GestureDetector(
                 onTap: () {
-                  //  Navigator.push(
-                  //           context,
-                  //           PageTransition(
-                  //               type: PageTransitionType.rightToLeft,
-                  //               reverseDuration: Duration(seconds: 1),
-                  //               duration: Duration(seconds: 1),
-                  //               child: About()));
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      reverseDuration: Duration(seconds: 1),
+                      duration: Duration(seconds: 1),
+                      child: Setting(),
+                    ),
+                  );
                 },
                 child: const Icon(
                   Icons.help_outline,
@@ -119,14 +126,14 @@ class _DashBoardState extends State<DashBoard> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: height * 0.03,
+              height: height * 0.02,
             ),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+                    builder: (context) => const LoginPage(),
                   ),
                 );
               },
@@ -135,14 +142,14 @@ class _DashBoardState extends State<DashBoard> {
                 width: width * 0.85,
                 decoration: BoxDecoration(
                     boxShadow: [
-                      BoxShadow(
+                       BoxShadow(
                         blurRadius: 10,
                         color: Colors.grey,
                       )
                     ],
                     gradient: const LinearGradient(colors: [
                       Color.fromRGBO(0, 172, 238, 10),
-                      const Color.fromRGBO(29, 191, 115, 1),
+                       Color.fromRGBO(29, 191, 115, 1),
                     ]),
                     borderRadius: BorderRadius.circular(5)),
                 child: Row(
@@ -159,7 +166,7 @@ class _DashBoardState extends State<DashBoard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                          Text(
                           "Book your appointment",
                           style: TextStyle(
                               fontFamily: "Roboto",
@@ -167,7 +174,7 @@ class _DashBoardState extends State<DashBoard> {
                               fontWeight: FontWeight.w400,
                               color: Color(0xFFFFFFFF)),
                         ),
-                        const Text(
+                         Text(
                           "Find nearest repair store with free quotation",
                           style: TextStyle(
                               fontFamily: "Roboto",
@@ -182,7 +189,7 @@ class _DashBoardState extends State<DashBoard> {
               ),
             ),
             SizedBox(
-              height: height * 0.02,
+              height: height * 0.01,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

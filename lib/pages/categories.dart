@@ -1,6 +1,11 @@
-
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
+import 'package:diagnose/pages/full_test_screens/camera_test_ft/camera_test_cmt.dart';
+import 'package:diagnose/pages/full_test_screens/connectivity_test_ft/connectivity_test_ct.dart';
+import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
+import 'package:diagnose/pages/full_test_screens/motion_testst/motion_test_mt.dart';
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
+import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
 import 'package:diagnose/pages/quick_test_screens/quick_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -153,6 +158,7 @@ class _HomeState extends State<Home> {
     }
 
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,
@@ -162,14 +168,17 @@ class _HomeState extends State<Home> {
           height: height * 0.1,
           width: width * 0.2,
         ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.apps,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
+            ),
+          );
+        }),
         actions: [
           Row(
             children: [
@@ -193,7 +202,7 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      bottomNavigationBar: NaviBar(),
+      bottomNavigationBar: const NaviBar(),
       body: Column(
         children: [
           SizedBox(
@@ -216,15 +225,43 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.only(left: 39, top: 10),
             child: Row(
               children: [
-                iconContainer("assets/Screenresolution.png", "Screen"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FullTest(),
+                        ),
+                      );
+                    },
+                    child:
+                        iconContainer("assets/Screenresolution.png", "Screen")),
                 SizedBox(
                   width: width * 0.185,
                 ),
-                iconContainer("assets/Sound.png", "Sound"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SountTestST(),
+                        ),
+                      );
+                    },
+                    child: iconContainer("assets/Sound.png", "Sound")),
                 SizedBox(
                   width: width * 0.176,
                 ),
-                iconContainer("assets/Circuit.png", "Motion"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MotionTestST(),
+                        ),
+                      );
+                    },
+                    child: iconContainer("assets/Circuit.png", "Motion")),
               ],
             ),
           ),
@@ -232,15 +269,44 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.only(left: 39, top: 10),
             child: Row(
               children: [
-                iconContainer("assets/Smartphoneram.png", "Hardware"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HardwareTestFT(),
+                        ),
+                      );
+                    },
+                    child:
+                        iconContainer("assets/Smartphoneram.png", "Hardware")),
                 SizedBox(
                   width: width * 0.17,
                 ),
-                iconContainer("assets/Computersconnecting.png", "Connectivity"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ConnectivityTest(),
+                        ),
+                      );
+                    },
+                    child: iconContainer(
+                        "assets/Computersconnecting.png", "Connectivity")),
                 SizedBox(
                   width: width * 0.16,
                 ),
-                iconContainer("assets/Camera.png", "Camera"),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CameraTest(),
+                        ),
+                      );
+                    },
+                    child: iconContainer("assets/Camera.png", "Camera")),
               ],
             ),
           ),
@@ -262,7 +328,7 @@ class _HomeState extends State<Home> {
               ),
               const Text(
                 "or",
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: 20,
                     fontFamily: "Advent Pro",
                     fontWeight: FontWeight.w800),
@@ -290,9 +356,9 @@ class _HomeState extends State<Home> {
                       context,
                       PageTransition(
                         type: PageTransitionType.leftToRight,
-                        reverseDuration: Duration(seconds: 1),
-                        duration: Duration(seconds: 1),
-                        child: QuickTest(),
+                        reverseDuration: const Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
+                        child: const QuickTest(),
                       ),
                     );
                   },
@@ -303,9 +369,9 @@ class _HomeState extends State<Home> {
                       context,
                       PageTransition(
                         type: PageTransitionType.fade,
-                        reverseDuration: Duration(seconds: 1),
-                        duration: Duration(seconds: 1),
-                        child: FullTest(),
+                        reverseDuration: const Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
+                        child: const FullTest(),
                       ),
                     );
                   },
@@ -444,7 +510,7 @@ class _HomeState extends State<Home> {
                                             borderRadius:
                                                 BorderRadius.circular(20)),
                                         child: const Center(
-                                            child: const Text(
+                                            child: Text(
                                           "Check now",
                                           style: TextStyle(
                                             fontFamily: "Advent Pro",
@@ -516,7 +582,7 @@ class _HomeState extends State<Home> {
                                       decoration: BoxDecoration(
                                           gradient:
                                               const LinearGradient(colors: [
-                                            const Color(0xFF1DBF73),
+                                            Color(0xFF1DBF73),
                                             Color(0xFF00ACEE),
                                           ]),
                                           borderRadius:
@@ -533,13 +599,14 @@ class _HomeState extends State<Home> {
                                             borderRadius:
                                                 BorderRadius.circular(20)),
                                         child: const Center(
-                                            child: const Text(
-                                          "Check now",
-                                          style: const TextStyle(
-                                              fontFamily: "Advent Pro",
-                                              fontWeight: FontWeight.w300,
-                                              fontSize: 14),
-                                        )),
+                                          child: Text(
+                                            "Check now",
+                                            style: TextStyle(
+                                                fontFamily: "Advent Pro",
+                                                fontWeight: FontWeight.w300,
+                                                fontSize: 14),
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -776,8 +843,8 @@ class _HomeState extends State<Home> {
                                         ),
                                       ],
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
+                                    const Padding(
+                                      padding: EdgeInsets.only(
                                         left: 3,
                                         top: 8,
                                       ),
@@ -785,7 +852,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           "Buttons",
                                           textAlign: TextAlign.center,
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             fontFamily: "Advent Pro",
                                             fontSize: 13,
                                             fontWeight: FontWeight.w300,
@@ -795,9 +862,6 @@ class _HomeState extends State<Home> {
                                     ),
                                   ],
                                 ),
-                                // gredianticonContainer(
-
-                                //     "assets/Bluetoothconnected.png", "Buttons"),
                                 SizedBox(
                                   width: width * 0.077,
                                 ),

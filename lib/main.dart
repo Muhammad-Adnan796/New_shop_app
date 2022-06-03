@@ -1,5 +1,7 @@
-import 'package:diagnose/auth/login.dart';
-// import 'package:diagnose/pages/splash.dart';
+import 'package:diagnose/appointments_screens/Cancel_Appoinmetn.dart';
+import 'package:diagnose/appointments_screens/Book_appionment.dart';
+import 'package:diagnose/pages/splash.dart';
+import 'package:diagnose/pages/wish_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,9 +23,13 @@ class MyApp extends StatelessWidget {
         designSize: const Size(896, 414),
         builder: (context, Widget) {
           return MaterialApp(
-              debugShowCheckedModeBanner: false, home: LoginPage()
-              // Splash(),
-              );
+            debugShowCheckedModeBanner: false,
+            home: Splash(),
+            routes: {
+              "/BookAppoinment": (context) => BookAppoinment(),
+              "/CancelAppoinment": (context) => CancelAppoinment(),
+            },
+          );
         });
   }
 }

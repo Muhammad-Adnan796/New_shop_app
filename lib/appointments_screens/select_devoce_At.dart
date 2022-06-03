@@ -1,4 +1,5 @@
 import 'package:diagnose/appointments_screens/appoinment_items.dart';
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/responsive_ui.dart';
 import 'package:flutter/material.dart';
@@ -61,17 +62,6 @@ class _AppointmentScreenAState extends State<AppointmentScreenA> {
                     fontWeight: FontWeight.w700,
                     color: const Color(0xFF000000)),
               ),
-              // Padding(
-              //   padding: EdgeInsets.only(bottom: 4.h),
-              //   child: IconButton(
-              //     onPressed: () {},
-              //     icon: const Icon(
-              //       Icons.close,
-              //       size: 8,
-              //       color: Colors.black,
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),
@@ -119,6 +109,7 @@ class _AppointmentScreenAState extends State<AppointmentScreenA> {
     }
 
     return Scaffold(
+      drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(30.h),
@@ -141,13 +132,17 @@ class _AppointmentScreenAState extends State<AppointmentScreenA> {
                 height: mediaQueryheight * 0.04,
                 width: mediaQueryWidth * 0.9,
               )),
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.apps_rounded,
-              color: Colors.black,
-            ),
-          ),
+          leading: Builder(builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: Icon(
+                Icons.apps,
+                color: Colors.black,
+              ),
+            );
+          }),
           backgroundColor: Colors.white,
         ),
       ),

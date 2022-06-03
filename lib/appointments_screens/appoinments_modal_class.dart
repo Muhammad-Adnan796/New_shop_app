@@ -1,4 +1,4 @@
-import 'package:diagnose/appointments_screens/appionment.dart';
+import 'package:diagnose/appointments_screens/Book_appionment.dart';
 import 'package:diagnose/appointments_screens/appoinment_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -58,13 +58,14 @@ class _AppoinmentModalState extends State<AppoinmentModal> {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>
-                    Appoinment(shopno[index], pictures[index],),
-              ),
-            );
+            Navigator.pushNamed(context, "/BookAppoinment", arguments: {
+              "Shop_no": shopno[index],
+              "Images": pictures[index],
+            });
+            // // MaterialPageRoute(
+            // //   builder: (context) =>
+            // //       Appoinment(shopno[index], pictures[index],),
+            // ),
           },
           child: Padding(
             padding: EdgeInsets.only(left: 30.w, right: 30.w),
