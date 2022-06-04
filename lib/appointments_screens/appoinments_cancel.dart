@@ -1,35 +1,22 @@
 import 'package:diagnose/appointments_screens/all_appoinments.dart';
-import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/src/size_extension.dart';
 import 'package:page_transition/page_transition.dart';
 
 class AppoinmentCancel extends StatefulWidget {
-  // var shopName;
+  const AppoinmentCancel({Key? key}) : super(key: key);
 
-  // var image;
-  // AppoinmentCancel(
-  //   this.shopName,
-  //   this.image,
-  // );
+
 
   @override
   State<AppoinmentCancel> createState() => _AppoinmentCancelState(
-      //   shopName,
-      //   image,
+
       );
 }
 
 class _AppoinmentCancelState extends State<AppoinmentCancel> {
-  // var shopName;
-  // String? shopDescription = "Description about shop and detials ";
-  // var image;
 
-  // _AppoinmentCancelState(
-  //   this.shopName,
-  //   this.image,
-  // );
   @override
   Widget build(BuildContext context) {
     var Data = ModalRoute.of(context)!.settings.arguments as Map;
@@ -39,7 +26,7 @@ class _AppoinmentCancelState extends State<AppoinmentCancel> {
     Widget expandedData(
       String listTitle,
     ) {
-      return Container(
+      return SizedBox(
         height: height * 0.08,
         child: Card(
           shape:
@@ -244,8 +231,8 @@ class _AppoinmentCancelState extends State<AppoinmentCancel> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [
-                          const Color(0xFF00ACEE),
-                          const Color(0xFF1DBF73),
+                           Color(0xFF00ACEE),
+                           Color(0xFF1DBF73),
                         ],
                       ),
                     ),

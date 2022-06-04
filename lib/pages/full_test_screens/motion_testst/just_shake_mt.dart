@@ -1,9 +1,7 @@
 import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
-import 'package:diagnose/pages/quick_test_screens/speaker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
-import 'dart:math' as math;
 
 class JustShakeMT extends StatefulWidget {
   const JustShakeMT({Key? key}) : super(key: key);
@@ -72,7 +70,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  color: const Color.fromRGBO(255, 255, 255, 1),
+                  color:  Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 12,
                   decoration: TextDecoration.none,
@@ -86,7 +84,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
             percentage,
             textAlign: TextAlign.center,
             style: const TextStyle(
-                color: const Color.fromRGBO(255, 255, 255, 1),
+                color:  Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 12,
                 decoration: TextDecoration.none,
@@ -108,7 +106,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
               begin: Alignment.topRight,
               end: Alignment.bottomRight,
               colors: [
-                const Color.fromRGBO(29, 191, 115, 1),
+                 Color.fromRGBO(29, 191, 115, 1),
                 Color.fromRGBO(0, 172, 238, 1)
               ]),
         ),
@@ -137,12 +135,12 @@ class _JustShakeMTState extends State<JustShakeMT> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.4,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],
@@ -166,7 +164,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
             const Text(
               'Just shake',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Roboto',
                   fontSize: 35,
@@ -182,8 +180,8 @@ class _JustShakeMTState extends State<JustShakeMT> {
             const Text(
               'All mothion test',
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                  color: const Color.fromRGBO(255, 255, 255, 1),
+              style:  TextStyle(
+                  color:  Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 12,
                   decoration: TextDecoration.none,
@@ -256,10 +254,10 @@ class _JustShakeMTState extends State<JustShakeMT> {
                 ),
                 const Padding(
                     padding: EdgeInsets.all(4),
-                    child: const Text(
+                    child:  Text(
                       'N',
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style:  TextStyle(
                           color: Color.fromRGBO(255, 255, 255, 1),
                           fontFamily: 'Advent Pro',
                           fontSize: 12,
@@ -298,7 +296,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
                 ),
                 const Padding(
                     padding: EdgeInsets.all(4),
-                    child: const Text(
+                    child:  Text(
                       'W',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -316,7 +314,7 @@ class _JustShakeMTState extends State<JustShakeMT> {
                 ),
                 const Padding(
                     padding: EdgeInsets.all(4),
-                    child: const Text(
+                    child:  Text(
                       'S',
                       textAlign: TextAlign.center,
                       style: TextStyle(

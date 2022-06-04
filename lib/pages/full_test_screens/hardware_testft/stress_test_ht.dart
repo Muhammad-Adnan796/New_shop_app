@@ -1,4 +1,4 @@
-import 'package:diagnose/pages/full_test_screens/hardware_testft/charging_test_ht.dart';
+
 import 'package:diagnose/pages/full_test_screens/hardware_testft/originality_test_ht.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -69,7 +69,7 @@ class _StressTestHTState extends State<StressTestHT> {
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  color: const Color.fromRGBO(255, 255, 255, 1),
+                  color:  Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 12,
                   decoration: TextDecoration.none,
@@ -83,7 +83,7 @@ class _StressTestHTState extends State<StressTestHT> {
             percentage,
             textAlign: TextAlign.center,
             style: const TextStyle(
-                color: const Color.fromRGBO(255, 255, 255, 1),
+                color:  Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 12,
                 decoration: TextDecoration.none,
@@ -134,12 +134,12 @@ class _StressTestHTState extends State<StressTestHT> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.5,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

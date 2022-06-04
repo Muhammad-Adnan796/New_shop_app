@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/src/size_extension.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({
+   CustomButton({
     required this.onPressed,
     required this.title,
     required this.colorbutton,

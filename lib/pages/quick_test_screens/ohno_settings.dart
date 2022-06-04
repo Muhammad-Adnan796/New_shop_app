@@ -55,12 +55,12 @@ class _OhnoSettingsState extends State<OhnoSettings> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
                   value: 0.6,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],

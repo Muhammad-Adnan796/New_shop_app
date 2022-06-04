@@ -1,7 +1,6 @@
 import 'package:diagnose/appointments_screens/Cancel_Appoinmetn.dart';
 import 'package:diagnose/appointments_screens/Book_appionment.dart';
 import 'package:diagnose/pages/splash.dart';
-import 'package:diagnose/pages/wish_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: const Size(896, 414),
-        builder: (context, Widget) {
+        builder: (context, widget) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             home: Splash(),

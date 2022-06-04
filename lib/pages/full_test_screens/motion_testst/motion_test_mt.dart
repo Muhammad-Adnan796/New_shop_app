@@ -4,7 +4,6 @@ import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_h
 import 'package:diagnose/pages/full_test_screens/motion_testst/just_shake_mt.dart';
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
 import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
-import 'package:diagnose/pages/full_test_screens/sound_testft/speaker_st.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -101,12 +100,12 @@ class _MotionTestSTState extends State<MotionTestST> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.4,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

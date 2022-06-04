@@ -1,7 +1,6 @@
 import 'package:diagnose/pages/full_test_screens/camera_test_ft/camera_test_cmt.dart';
 import 'package:diagnose/pages/full_test_screens/connectivity_test_ft/bluetooth.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
-import 'package:diagnose/pages/full_test_screens/motion_testst/just_shake_mt.dart';
 import 'package:diagnose/pages/full_test_screens/motion_testst/motion_test_mt.dart';
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
 import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
@@ -101,12 +100,12 @@ class _ConnectivityTestState extends State<ConnectivityTest> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.8,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

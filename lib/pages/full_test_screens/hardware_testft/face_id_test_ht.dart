@@ -1,4 +1,4 @@
-import 'package:diagnose/pages/full_test_screens/hardware_testft/charging_test_ht.dart';
+
 import 'package:diagnose/pages/full_test_screens/hardware_testft/light_sensor_ht.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -61,7 +61,7 @@ class _FaceIdTestHTState extends State<FaceIdTestHT> {
                   child: LinearProgressIndicator(
                     value: 0.5,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

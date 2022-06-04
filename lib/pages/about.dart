@@ -75,14 +75,13 @@ class _AboutState extends State<About> {
                         ),
                         child: Row(
                           children: [
-                            Container(
-                                child: Padding(
+                            Padding(
                               padding: const EdgeInsets.only(left: 60.0),
                               child: Image.asset(
-                                "assets/apbar.png",
-                                height: 80,
+                            "assets/apbar.png",
+                            height: 80,
                               ),
-                            )),
+                            ),
                           ],
                         ),
                       ),

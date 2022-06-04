@@ -19,14 +19,9 @@ class _SplashState extends State<Splash> {
     Timer(Duration(seconds: 5), () {
       Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Intro()
-              // TabsPage()
+          MaterialPageRoute(builder: (context) => const Intro()
+  
               ));
-      //  Navigator.push(
-      //                   context,
-      //                   PageTransition(
-      //                       type: PageTransitionType.rotate,
-      //                       child: LoginScreen()));
     });
   }
 

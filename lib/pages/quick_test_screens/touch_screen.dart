@@ -60,7 +60,7 @@ class _ScreentouchState extends State<Screentouch> {
                   child: LinearProgressIndicator(
                     value: 0.3,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

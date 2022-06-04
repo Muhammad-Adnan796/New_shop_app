@@ -17,7 +17,7 @@ class _LoginLoadingState extends State<LoginLoading> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 4),
+      const Duration(seconds: 4),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -170,16 +170,16 @@ class _LoginLoadingState extends State<LoginLoading> {
                   ),
                   child: Row(
                     children: [
-                      Text(
+                       Text(
                         "Forgot Password",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontFamily: "Roboto",
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
-                            color: const Color(0xFFC4C4C4)),
+                            color: Color(0xFFC4C4C4)),
                       ),
-                      const Icon(
+                       Icon(
                         Icons.lock,
                         color: Colors.black38,
                         size: 15,

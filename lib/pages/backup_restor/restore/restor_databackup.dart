@@ -114,15 +114,14 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 110.0),
-                      child: Container(
-                          child: Text(
+                      child: Text(
                         "Restore",
                         style: TextStyle(
-                            fontSize: 25,
-                            fontFamily: 'Roboto',
-                            color: Color(0XFF191D21),
-                            decoration: TextDecoration.none),
-                      )),
+                        fontSize: 25,
+                        fontFamily: 'Roboto',
+                        color: Color(0XFF191D21),
+                        decoration: TextDecoration.none),
+                      ),
                     ),
                   ],
                 ),
@@ -141,7 +140,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -200,7 +199,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -259,7 +258,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -318,7 +317,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -377,7 +376,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(

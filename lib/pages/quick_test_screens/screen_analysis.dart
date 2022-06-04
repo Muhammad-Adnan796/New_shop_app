@@ -27,7 +27,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
-              const Color.fromRGBO(29, 191, 115, 1),
+               Color.fromRGBO(29, 191, 115, 1),
               Color.fromRGBO(0, 172, 238, 1)
             ]),
       ),
@@ -39,7 +39,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
           const Text(
             '3/8',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style: TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
               fontFamily: 'Roboto',
               fontSize: 12,
@@ -56,12 +56,12 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
                   value: 0.3,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],
@@ -75,8 +75,8 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                 width: width * 0.6,
                 height: height * 0.3,
                 decoration: const BoxDecoration(
-                  image: const DecorationImage(
-                      image: const AssetImage('assets/Gif/mobile.gif'),
+                  image:  DecorationImage(
+                      image:  AssetImage('assets/Gif/mobile.gif'),
                       fit: BoxFit.fill),
                 ),
               ),
@@ -86,8 +86,8 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                   width: width * 0.2,
                   height: height * 0.2,
                   decoration: const BoxDecoration(
-                    image: const DecorationImage(
-                        image: const AssetImage('assets/Gif/Cracked.gif'),
+                    image:  DecorationImage(
+                        image:  AssetImage('assets/Gif/Cracked.gif'),
                         fit: BoxFit.fill),
                   ),
                 ),
@@ -152,14 +152,14 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                         child: SimpleDialog(
                           insetPadding: const EdgeInsets.all(100),
                           children: [
-                            Container(
+                            SizedBox(
                               height: height * 0.1,
                               width: width * 0.2,
                               child: Column(
                                 children: [
                                   const Text(
                                     "Screen cracked ?",
-                                    style: const TextStyle(
+                                    style:  TextStyle(
                                       fontSize: 15,
                                     ),
                                   ),
@@ -218,7 +218,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
                                         child: const Text(
                                           "No",
                                           textAlign: TextAlign.center,
-                                          style: const TextStyle(
+                                          style:  TextStyle(
                                               color: Colors.green,
                                               fontFamily: 'Advent Pro',
                                               fontSize: 25,
@@ -263,7 +263,7 @@ class _ScreenAnalysisState extends State<ScreenAnalysis> {
             child: const Text(
               'Skip',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,

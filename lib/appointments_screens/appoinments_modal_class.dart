@@ -1,4 +1,4 @@
-import 'package:diagnose/appointments_screens/Book_appionment.dart';
+
 import 'package:diagnose/appointments_screens/appoinment_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -69,7 +69,7 @@ class _AppoinmentModalState extends State<AppoinmentModal> {
           },
           child: Padding(
             padding: EdgeInsets.only(left: 30.w, right: 30.w),
-            child: Container(
+            child: SizedBox(
               height: 52.h,
               width: mediaQueryWidth * 0.9,
               child: Card(
@@ -108,15 +108,13 @@ class _AppoinmentModalState extends State<AppoinmentModal> {
                               padding: EdgeInsets.only(left: 5.w),
                               child: Row(
                                 children: [
-                                  Container(
-                                    child: Text(
-                                      allData[index].shopNo,
-                                      style: TextStyle(
-                                          fontFamily: "Roboto",
-                                          fontWeight: FontWeight.w700,
-                                          fontSize: 20,
-                                          color: Color(0xFF191D21)),
-                                    ),
+                                  Text(
+                                    allData[index].shopNo,
+                                    style: TextStyle(
+                                        fontFamily: "Roboto",
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 20,
+                                        color: Color(0xFF191D21)),
                                   ),
                                   SizedBox(
                                     width: mediaQueryWidth * 0.25,

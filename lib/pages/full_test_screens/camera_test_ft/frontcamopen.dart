@@ -25,7 +25,7 @@ class _FrontCameraOpenHTState extends State<FrontCameraOpenHT> {
             end: Alignment.bottomRight,
             colors: [
               Color.fromRGBO(29, 191, 115, 1),
-              const Color.fromRGBO(0, 172, 238, 1)
+               Color.fromRGBO(0, 172, 238, 1)
             ]),
       ),
       child: Column(
@@ -53,12 +53,12 @@ class _FrontCameraOpenHTState extends State<FrontCameraOpenHT> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.8,
                 child: LinearProgressIndicator(
                   value: 1,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],
@@ -97,7 +97,7 @@ class _FrontCameraOpenHTState extends State<FrontCameraOpenHT> {
           const Text(
             'Keep the front-facing comera pointed\nat yourself until test is complete',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 16,

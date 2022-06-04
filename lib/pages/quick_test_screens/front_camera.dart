@@ -47,8 +47,8 @@ class _FrontCameraState extends State<FrontCamera> {
               const Text(
                 'Front Cam',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: const Color.fromRGBO(255, 255, 255, 1),
+                style:  TextStyle(
+                  color:  Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,
                   decoration: TextDecoration.none,
@@ -66,8 +66,8 @@ class _FrontCameraState extends State<FrontCamera> {
             width: width * 0.6,
             height: height * 0.3,
             decoration: const BoxDecoration(
-              image: const DecorationImage(
-                  image: const AssetImage('assets/Gif/box.gif'), fit: BoxFit.fill),
+              image:  DecorationImage(
+                  image:  AssetImage('assets/Gif/box.gif'), fit: BoxFit.fill),
             ),
           ),
           SizedBox(

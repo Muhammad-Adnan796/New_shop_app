@@ -1,35 +1,21 @@
 import 'package:diagnose/appointments_screens/all_appoinments.dart';
-import 'package:diagnose/appointments_screens/appoinment_items.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/src/size_extension.dart';
 import 'package:page_transition/page_transition.dart';
 
 class BookAppoinment extends StatefulWidget {
-  // var shopName;
+  const BookAppoinment({Key? key}) : super(key: key);
 
-  // var image;
-  // Appoinment(
-  //   this.shopName,
-  //   this.image,
-  // );
+
 
   @override
   State<BookAppoinment> createState() => _BookAppoinmentState();
-  //   shopName,
-  //   image,
-  // );
+ 
 }
 
 class _BookAppoinmentState extends State<BookAppoinment> {
-  // var shopName;
-  // String? shopDescription = "Description about shop and detials ";
-  // var image;
 
-  // _AppoinmentState(
-  //   this.shopName,
-  //   this.image,
-  // );
   @override
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
@@ -40,7 +26,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
     Widget expandedData(
       String listTitle,
     ) {
-      return Container(
+      return SizedBox(
         height: height * 0.08,
         child: Card(
           shape:
@@ -245,8 +231,8 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [
-                          const Color(0xFF00ACEE),
-                          const Color(0xFF1DBF73),
+                           Color(0xFF00ACEE),
+                           Color(0xFF1DBF73),
                         ],
                       ),
                     ),

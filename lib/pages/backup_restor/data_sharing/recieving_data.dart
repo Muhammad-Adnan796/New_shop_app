@@ -33,28 +33,26 @@ class _RecievingDataState extends State<RecievingData> {
               );
             }),
           ),
-          body: Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                  height: height * 0.65,
-                ),
-                Center(
-                  child: Text(
-                    "Wait this process take a time\nDo not close application.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontFamily: "Advent Pro",
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                    ),
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(
+                height: height * 0.65,
+              ),
+              Center(
+                child: Text(
+                  "Wait this process take a time\nDo not close application.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: "Advent Pro",
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         Container(

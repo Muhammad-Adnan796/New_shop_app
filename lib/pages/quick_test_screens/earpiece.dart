@@ -56,12 +56,12 @@ class _EarPieceState extends State<EarPiece> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.5,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],
@@ -115,32 +115,30 @@ class _EarPieceState extends State<EarPiece> {
             SizedBox(
               height: height * 0.01,
             ),
-            Container(
-              child: SingleChildScrollView(
-                child: PinCodeTextField(
-                  highlight: true,
-                  highlightColor: Colors.black,
-                  defaultBorderColor: Colors.black,
-                  hasTextBorderColor: Colors.white,
-                  highlightPinBoxColor: Colors.white,
-                  maxLength: 4,
-                  onTextChanged: (text) {
-                    setState(() {});
-                  },
-                  onDone: (text) {},
-                  pinBoxWidth: 50,
-                  pinBoxHeight: 64,
-                  hasUnderline: true,
-                  wrapAlignment: WrapAlignment.spaceAround,
-                  pinBoxDecoration:
-                      ProvidedPinBoxDecoration.defaultPinBoxDecoration,
-                  pinTextStyle: TextStyle(fontSize: 22.0),
-                  pinTextAnimatedSwitcherTransition:
-                      ProvidedPinBoxTextAnimation.scalingTransition,
-                  pinTextAnimatedSwitcherDuration: Duration(milliseconds: 300),
-                  highlightAnimationBeginColor: Colors.black,
-                  highlightAnimationEndColor: Colors.white12,
-                ),
+            SingleChildScrollView(
+              child: PinCodeTextField(
+                highlight: true,
+                highlightColor: Colors.black,
+                defaultBorderColor: Colors.black,
+                hasTextBorderColor: Colors.white,
+                highlightPinBoxColor: Colors.white,
+                maxLength: 4,
+                onTextChanged: (text) {
+                  setState(() {});
+                },
+                onDone: (text) {},
+                pinBoxWidth: 50,
+                pinBoxHeight: 64,
+                hasUnderline: true,
+                wrapAlignment: WrapAlignment.spaceAround,
+                pinBoxDecoration:
+                    ProvidedPinBoxDecoration.defaultPinBoxDecoration,
+                pinTextStyle: TextStyle(fontSize: 22.0),
+                pinTextAnimatedSwitcherTransition:
+                    ProvidedPinBoxTextAnimation.scalingTransition,
+                pinTextAnimatedSwitcherDuration: Duration(milliseconds: 300),
+                highlightAnimationBeginColor: Colors.black,
+                highlightAnimationEndColor: Colors.white12,
               ),
             ),
             SizedBox(

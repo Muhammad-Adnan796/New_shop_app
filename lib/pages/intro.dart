@@ -282,7 +282,7 @@ class _IntroState extends State<Intro> {
                                 ),
                                 const Padding(
                                   padding: EdgeInsets.only(top: 40.0),
-                                  child: const Text(
+                                  child: Text(
                                     "Welcome",
                                     style: TextStyle(
                                         fontSize: 30,
@@ -379,7 +379,7 @@ class _IntroState extends State<Intro> {
                                       begin: Alignment.topRight,
                                       end: Alignment.bottomRight,
                                       colors: [
-                                        const Color.fromRGBO(29, 191, 115, 1),
+                                        Color.fromRGBO(29, 191, 115, 1),
                                         Color.fromRGBO(0, 172, 238, 1)
                                       ]),
                                   borderRadius: BorderRadius.only(
@@ -480,7 +480,7 @@ class _IntroState extends State<Intro> {
                                         end: Alignment.bottomRight,
                                         colors: [
                                           Color.fromRGBO(29, 191, 115, 1),
-                                          const Color.fromRGBO(0, 172, 238, 1)
+                                          Color.fromRGBO(0, 172, 238, 1)
                                         ]),
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(10),
@@ -515,8 +515,8 @@ class _IntroState extends State<Intro> {
                                 alignment: Alignment.center,
                                 margin: const EdgeInsets.symmetric(
                                     horizontal: 40, vertical: 10),
-                                child: RaisedButton(
-                                  onPressed: () {
+                                child: GestureDetector(
+                                  onTap: () {
                                     Navigator.push(
                                       context,
                                       PageTransition(
@@ -528,11 +528,6 @@ class _IntroState extends State<Intro> {
                                       ),
                                     );
                                   },
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadius.circular(80.0)),
-                                  textColor: Colors.white,
-                                  padding: const EdgeInsets.all(0),
                                   child: Container(
                                     alignment: Alignment.center,
                                     height: height * 0.055,

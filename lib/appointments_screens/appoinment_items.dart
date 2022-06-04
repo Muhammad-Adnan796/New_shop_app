@@ -1,4 +1,4 @@
-import 'package:diagnose/appointments_screens/Book_appionment.dart';
+
 import 'package:diagnose/appointments_screens/appoinment_data.dart';
 import 'package:diagnose/appointments_screens/appoinment_location.dart';
 import 'package:diagnose/appointments_screens/appoinments_modal_class.dart';
@@ -39,15 +39,7 @@ class AppointmentsItemA extends StatefulWidget {
 }
 
 class _AppointmentsItemAState extends State<AppointmentsItemA> {
-  static List<Color> colorsList = [
-    Color(0xFFCBE3FF),
-    Color(0xFFD9FFF8),
-    Color(0xFFCBE3FF),
-    Color(0xFFFFF3B6),
-    Color(0xFFFFD1B6),
-    Color(0xFFe5ffe0),
-    Color(0xFFe0ffe1),
-  ];
+
   static List<String> shopno = [
     "Shop 1",
     "Shop 2",

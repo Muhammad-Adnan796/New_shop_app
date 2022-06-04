@@ -26,7 +26,7 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
             end: Alignment.bottomRight,
             colors: [
               Color.fromRGBO(29, 191, 115, 1),
-              const Color.fromRGBO(0, 172, 238, 1)
+               Color.fromRGBO(0, 172, 238, 1)
             ]),
       ),
       child: Column(
@@ -37,7 +37,7 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
           const Text(
             '5/8',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
               fontFamily: 'Roboto',
               fontSize: 12,
@@ -54,12 +54,12 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
                   value: 0.5,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],
@@ -84,7 +84,7 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
           const Text(
             'Oh, no!',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 35,
@@ -97,7 +97,7 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
           const Text(
             'Make sure no Earpiece or\n any  other audio connected with your \nphone.',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 16,
@@ -163,7 +163,7 @@ class _OhnoEarPieceState extends State<OhnoEarPiece> {
             child: const Text(
               'Skip',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/backup_restor/restore/data_backup_restore.dart';
 import 'package:flutter/material.dart';
@@ -99,18 +100,22 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
 
     return Scaffold(
       bottomNavigationBar: NaviBar(),
+      drawer: MyDrawer(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.apps,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
+            ),
+          );
+        }),
       ),
       body: Stack(
         children: [
@@ -124,15 +129,14 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 110.0),
-                        child: Container(
-                            child: Text(
+                        child: Text(
                           "Data Backup",
                           style: TextStyle(
                               fontSize: 25,
                               fontFamily: 'Roboto',
                               color: Color(0XFF191D21),
                               decoration: TextDecoration.none),
-                        )),
+                        ),
                       ),
                     ],
                   ),
@@ -152,7 +156,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                   //         duration: Duration(seconds: 1),
                   //         child: Databack()));
                 },
-                child: Container(
+                child: SizedBox(
                   width: width * 0.8,
                   height: height * 0.06,
                   child: Container(
@@ -212,7 +216,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                   //         duration: Duration(seconds: 1),
                   //         child: Databack()));
                 },
-                child: Container(
+                child: SizedBox(
                   width: width * 0.8,
                   height: height * 0.06,
                   child: Container(
@@ -272,7 +276,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                   //         duration: Duration(seconds: 1),
                   //         child: Databack()));
                 },
-                child: Container(
+                child: SizedBox(
                   width: width * 0.8,
                   height: height * 0.06,
                   child: Container(
@@ -332,7 +336,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                   //         duration: Duration(seconds: 1),
                   //         child: Databack()));
                 },
-                child: Container(
+                child: SizedBox(
                   width: width * 0.8,
                   height: height * 0.06,
                   child: Container(
@@ -392,7 +396,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
                   //         duration: Duration(seconds: 1),
                   //         child: Databack()));
                 },
-                child: Container(
+                child: SizedBox(
                   width: width * 0.8,
                   height: height * 0.06,
                   child: Container(

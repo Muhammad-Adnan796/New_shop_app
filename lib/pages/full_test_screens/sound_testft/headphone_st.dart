@@ -39,7 +39,7 @@ class _HEadphone1STState extends State<HEadphone1ST> {
             const Text(
               '2/6',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 12,
@@ -56,12 +56,12 @@ class _HEadphone1STState extends State<HEadphone1ST> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.2,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],
@@ -83,11 +83,11 @@ class _HEadphone1STState extends State<HEadphone1ST> {
             ),
             const Padding(
               padding: EdgeInsets.only(left: 8, right: 8, bottom: 5, top: 5),
-              child: const Text(
+              child:  Text(
                 'Head Phone',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                    color:  Color.fromRGBO(255, 255, 255, 1),
                     fontFamily: 'Roboto',
                     fontSize: 35,
                     decoration: TextDecoration.none,
@@ -101,7 +101,7 @@ class _HEadphone1STState extends State<HEadphone1ST> {
               'Just enter the number what yo listen\nand right in box',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: const Color.fromRGBO(255, 255, 255, 1),
+                color:  Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Advent Pro',
                 fontSize: 16,
                 decoration: TextDecoration.none,
@@ -114,33 +114,31 @@ class _HEadphone1STState extends State<HEadphone1ST> {
             SizedBox(
               height: height * 0.01,
             ),
-            Container(
-              child: SingleChildScrollView(
-                child: PinCodeTextField(
-                  highlight: true,
-                  highlightColor: Colors.black,
-                  defaultBorderColor: Colors.black,
-                  hasTextBorderColor: Colors.white,
-                  highlightPinBoxColor: Colors.white,
-                  maxLength: 4,
-                  onTextChanged: (text) {
-                    setState(() {});
-                  },
-                  onDone: (text) {},
-                  pinBoxWidth: 50,
-                  pinBoxHeight: 64,
-                  hasUnderline: true,
-                  wrapAlignment: WrapAlignment.spaceAround,
-                  pinBoxDecoration:
-                      ProvidedPinBoxDecoration.defaultPinBoxDecoration,
-                  pinTextStyle: const TextStyle(fontSize: 22.0),
-                  pinTextAnimatedSwitcherTransition:
-                      ProvidedPinBoxTextAnimation.scalingTransition,
-                  pinTextAnimatedSwitcherDuration:
-                      const Duration(milliseconds: 300),
-                  highlightAnimationBeginColor: Colors.black,
-                  highlightAnimationEndColor: Colors.white12,
-                ),
+            SingleChildScrollView(
+              child: PinCodeTextField(
+                highlight: true,
+                highlightColor: Colors.black,
+                defaultBorderColor: Colors.black,
+                hasTextBorderColor: Colors.white,
+                highlightPinBoxColor: Colors.white,
+                maxLength: 4,
+                onTextChanged: (text) {
+                  setState(() {});
+                },
+                onDone: (text) {},
+                pinBoxWidth: 50,
+                pinBoxHeight: 64,
+                hasUnderline: true,
+                wrapAlignment: WrapAlignment.spaceAround,
+                pinBoxDecoration:
+                    ProvidedPinBoxDecoration.defaultPinBoxDecoration,
+                pinTextStyle: const TextStyle(fontSize: 22.0),
+                pinTextAnimatedSwitcherTransition:
+                    ProvidedPinBoxTextAnimation.scalingTransition,
+                pinTextAnimatedSwitcherDuration:
+                    const Duration(milliseconds: 300),
+                highlightAnimationBeginColor: Colors.black,
+                highlightAnimationEndColor: Colors.white12,
               ),
             ),
             SizedBox(
@@ -196,7 +194,7 @@ class _HEadphone1STState extends State<HEadphone1ST> {
                 'Again',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                    color:  Color.fromRGBO(255, 255, 255, 1),
                     fontFamily: 'Advent Pro',
                     fontSize: 25,
                     decoration: TextDecoration.none,

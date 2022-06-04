@@ -42,7 +42,7 @@ class _AppointmentScreenAState extends State<AppointmentScreenA> {
     double mediaQueryheight = MediaQuery.of(context).size.height;
 
     Widget expandListContainer(String listTitle, String listData) {
-      return Container(
+      return SizedBox(
         width: mediaQueryWidth * 0.2,
         height: mediaQueryheight * 0.05,
         child: Card(
@@ -146,144 +146,142 @@ class _AppointmentScreenAState extends State<AppointmentScreenA> {
           backgroundColor: Colors.white,
         ),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Padding(
-            padding: EdgeInsets.only(left: 32.w, right: 47.w),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: mediaQueryheight * 0.02,
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: EdgeInsets.only(left: 32.w, right: 47.w),
+          child: Column(
+            children: [
+              SizedBox(
+                height: mediaQueryheight * 0.02,
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 15.w,
+                  right: 15.w,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 15.w,
-                    right: 15.w,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Select device",
+                      style: TextStyle(
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                          color: const Color(0xFF223263)),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AppointmentsItem(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Appointments",
+                        style: TextStyle(
+                          fontFamily: "Advent Pro",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          color: const Color(0xFF000000),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: mediaQueryheight * 0.0001,
+              ),
+              expandedData("Device", "Touch"),
+              SizedBox(
+                height: mediaQueryheight * 0.01,
+              ),
+              expandedData("Company", "Touch"),
+              SizedBox(
+                height: mediaQueryheight * 0.01,
+              ),
+              expandedData("Model Number", "Touch"),
+              SizedBox(
+                height: mediaQueryheight * 0.01,
+              ),
+              expandedData("Services", "Touch"),
+              SizedBox(
+                height: mediaQueryheight * 0.01,
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                elevation: 20,
+                shadowColor: Colors.grey,
+                child: Container(
+                  height: mediaQueryheight * 0.2,
+                  width: mediaQueryWidth * 0.9,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Select device",
+                  child: TextFormField(
+                    maxLines: 200,
+                    decoration: const InputDecoration(
+                        border:  OutlineInputBorder(
+                            borderSide: BorderSide.none),
+                        hintText: "Address :"),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: mediaQueryheight * 0.01,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AppointmentsItem(),
+                    ),
+                  );
+                },
+                child: Card(
+                  child: Container(
+                    height: mediaQueryheight * 0.06,
+                    width: mediaQueryWidth * 0.99,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.r),
+                      gradient: const LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: [
+                           Color(0xFF00ACEE),
+                           Color(0xFF1DBF73),
+                        ],
+                      ),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.r),
+                      ),
+                      height: mediaQueryheight * 0.058,
+                      width: mediaQueryWidth * 0.88,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Search Near Shop",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             fontFamily: "Roboto",
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w600,
                             fontSize: 16,
-                            color: const Color(0xFF223263)),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const AppointmentsItem(),
-                          //   ),
-                          // );
-                        },
-                        child: Text(
-                          "Appointments",
-                          style: TextStyle(
-                            fontFamily: "Advent Pro",
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                            color: const Color(0xFF000000),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: mediaQueryheight * 0.0001,
-                ),
-                expandedData("Device", "Touch"),
-                SizedBox(
-                  height: mediaQueryheight * 0.01,
-                ),
-                expandedData("Company", "Touch"),
-                SizedBox(
-                  height: mediaQueryheight * 0.01,
-                ),
-                expandedData("Model Number", "Touch"),
-                SizedBox(
-                  height: mediaQueryheight * 0.01,
-                ),
-                expandedData("Services", "Touch"),
-                SizedBox(
-                  height: mediaQueryheight * 0.01,
-                ),
-                Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  elevation: 20,
-                  shadowColor: Colors.grey,
-                  child: Container(
-                    height: mediaQueryheight * 0.2,
-                    width: mediaQueryWidth * 0.9,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: TextFormField(
-                      maxLines: 200,
-                      decoration: const InputDecoration(
-                          border: const OutlineInputBorder(
-                              borderSide: BorderSide.none),
-                          hintText: "Address :"),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: mediaQueryheight * 0.01,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => AppointmentsItem(),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    child: Container(
-                      height: mediaQueryheight * 0.06,
-                      width: mediaQueryWidth * 0.99,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.r),
-                        gradient: const LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            const Color(0xFF00ACEE),
-                            const Color(0xFF1DBF73),
-                          ],
-                        ),
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15.r),
-                        ),
-                        height: mediaQueryheight * 0.058,
-                        width: mediaQueryWidth * 0.88,
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Search Near Shop",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: "Roboto",
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                              color: const Color(0xFF000000)),
-                        ),
+                            color: const Color(0xFF000000)),
                       ),
                     ),
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         ),
       ),

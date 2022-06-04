@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Slide1Widget extends StatefulWidget {
+  const Slide1Widget({Key? key}) : super(key: key);
+
   @override
   _Slide1WidgetState createState() => _Slide1WidgetState();
 }

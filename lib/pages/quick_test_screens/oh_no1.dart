@@ -38,7 +38,7 @@ class _OhNo1headphoneState extends State<OhNo1headphone> {
           const Text(
             '2/8',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
               color: Color.fromRGBO(255, 255, 255, 1),
               fontFamily: 'Roboto',
               fontSize: 12,
@@ -55,12 +55,12 @@ class _OhNo1headphoneState extends State<OhNo1headphone> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
                   value: 0.2,
                   backgroundColor: Colors.white.withOpacity(0.5),
-                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ],
@@ -72,7 +72,7 @@ class _OhNo1headphoneState extends State<OhNo1headphone> {
             width: width * 0.24,
             height: height * 0.12,
             decoration: const BoxDecoration(
-              image: const DecorationImage(
+              image:  DecorationImage(
                   image: AssetImage(
                     'assets/cross.gif',
                   ),
@@ -85,7 +85,7 @@ class _OhNo1headphoneState extends State<OhNo1headphone> {
           const Text(
             'Oh, no!',
             textAlign: TextAlign.center,
-            style: const TextStyle(
+            style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 35,
@@ -160,7 +160,7 @@ class _OhNo1headphoneState extends State<OhNo1headphone> {
             child: const Text(
               'Skip',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Advent Pro',
                   fontSize: 25,

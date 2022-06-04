@@ -56,12 +56,12 @@ class _MobilepercentFTState extends State<MobilepercentFT> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.3,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],
@@ -129,7 +129,7 @@ class _MobilepercentFTState extends State<MobilepercentFT> {
               child: const Text(
                 'Skip',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style:  TextStyle(
                     color: Color.fromRGBO(255, 255, 255, 1),
                     fontFamily: 'Advent Pro',
                     fontSize: 25,

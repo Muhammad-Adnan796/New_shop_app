@@ -25,335 +25,307 @@ class _ContactMBState extends State<ContactMB> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Positioned(
-              top: 20,
-              child: Icon(
-                Icons.apps,
-                color: Colors.black,
-              ),
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
             ),
           );
         }),
       ),
-      body: Container(
-          child: Column(children: [
+      body: Column(children: [
         Center(
-            child: Padding(
-                padding: const EdgeInsets.only(top: 30, bottom: 10),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: GestureDetector(
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                            child: Container(
-                                child: Image.asset(
-                              "assets/icon.png",
-                              height: 30,
-                              width: 30,
-                            ))),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 0.0),
-                        child: Container(
-                            child: Text(
-                          "Contacts",
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontFamily: 'Roboto',
-                              color: Colors.black,
-                              decoration: TextDecoration.none),
+        child: Padding(
+            padding: const EdgeInsets.only(top: 30, bottom: 10),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Image.asset(
+                          "assets/icon.png",
+                          height: 30,
+                          width: 30,
                         )),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20.0),
-                        child: Container(
-                          child: Icon(
-                            Icons.check_box,
-                            color: Colors.green,
-                          ),
-                        ),
-                      ),
-                    ]))),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 0.0),
+                    child: Text(
+                      "Contacts",
+                      style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: 'Roboto',
+                      color: Colors.black,
+                      decoration: TextDecoration.none),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                    child: Icon(
+                      Icons.check_box,
+                      color: Colors.green,
+                    ),
+                  ),
+                ]))),
         SizedBox(
-          height: height * 0.04,
+      height: height * 0.04,
         ),
         Container(
-          width: width * 0.9,
-          height: height * 0.05,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(218, 218, 218, 1),
-              width: 1,
+      width: width * 0.9,
+      height: height * 0.05,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromRGBO(218, 218, 218, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "Name 1",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
             ),
           ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "Name 1",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "03152952995",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.27,
-              ),
-              Container(
-                child: Icon(
-                  Icons.check_box,
-                  color: Colors.green,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: width * 0.20,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "03152952995",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            width: width * 0.27,
+          ),
+          Icon(
+            Icons.check_box,
+            color: Colors.green,
+          ),
+        ],
+      ),
         ),
         SizedBox(
-          height: height * 0.02,
+      height: height * 0.02,
         ),
         Container(
-          width: width * 0.9,
-          height: height * 0.05,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(218, 218, 218, 1),
-              width: 1,
+      width: width * 0.9,
+      height: height * 0.05,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromRGBO(218, 218, 218, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "Name 1",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
             ),
           ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "Name 1",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "03152952995",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.27,
-              ),
-              Container(
-                child: Icon(
-                  Icons.check_box,
-                  color: Colors.green,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: width * 0.20,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "03152952995",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            width: width * 0.27,
+          ),
+          Icon(
+            Icons.check_box,
+            color: Colors.green,
+          ),
+        ],
+      ),
         ),
         SizedBox(
-          height: height * 0.02,
+      height: height * 0.02,
         ),
         Container(
-          width: width * 0.9,
-          height: height * 0.05,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(218, 218, 218, 1),
-              width: 1,
+      width: width * 0.9,
+      height: height * 0.05,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromRGBO(218, 218, 218, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "Name 1",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
             ),
           ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "Name 1",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "03152952995",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.27,
-              ),
-              Container(
-                child: Icon(
-                  Icons.check_box,
-                  color: Colors.green,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: width * 0.20,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "03152952995",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            width: width * 0.27,
+          ),
+          Icon(
+            Icons.check_box,
+            color: Colors.green,
+          ),
+        ],
+      ),
         ),
         SizedBox(
-          height: height * 0.02,
+      height: height * 0.02,
         ),
         Container(
-          width: width * 0.9,
-          height: height * 0.05,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(218, 218, 218, 1),
-              width: 1,
+      width: width * 0.9,
+      height: height * 0.05,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromRGBO(218, 218, 218, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "Name 1",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
             ),
           ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "Name 1",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "03152952995",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.27,
-              ),
-              Container(
-                child: Icon(
-                  Icons.check_box,
-                  color: Colors.green,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: width * 0.20,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "03152952995",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            width: width * 0.27,
+          ),
+          Icon(
+            Icons.check_box,
+            color: Colors.green,
+          ),
+        ],
+      ),
         ),
         SizedBox(
-          height: height * 0.02,
+      height: height * 0.02,
         ),
         Container(
-          width: width * 0.9,
-          height: height * 0.05,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(218, 218, 218, 1),
-              width: 1,
+      width: width * 0.9,
+      height: height * 0.05,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Color.fromRGBO(218, 218, 218, 1),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "Name 1",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
             ),
           ),
-          child: Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "Name 1",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Container(
-                    child: Text(
-                  "03152952995",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Advent Pro',
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w500),
-                )),
-              ),
-              SizedBox(
-                width: width * 0.27,
-              ),
-              Container(
-                child: Icon(
-                  Icons.check_box,
-                  color: Colors.green,
-                ),
-              ),
-            ],
+          SizedBox(
+            width: width * 0.20,
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Text(
+              "03152952995",
+              style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'Advent Pro',
+              color: Colors.black,
+              decoration: TextDecoration.none,
+              fontWeight: FontWeight.w500),
+            ),
+          ),
+          SizedBox(
+            width: width * 0.27,
+          ),
+          Icon(
+            Icons.check_box,
+            color: Colors.green,
+          ),
+        ],
+      ),
         ),
-      ])),
+      ]),
     );
   }
 }

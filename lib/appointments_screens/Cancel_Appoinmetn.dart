@@ -1,4 +1,4 @@
-import 'package:diagnose/appointments_screens/all_appoinments.dart';
+
 import 'package:diagnose/appointments_screens/appoinment_items.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
@@ -6,30 +6,16 @@ import 'package:flutter_screenutil/src/size_extension.dart';
 import 'package:page_transition/page_transition.dart';
 
 class CancelAppoinment extends StatefulWidget {
-  // var shopName;
+  const CancelAppoinment({Key? key}) : super(key: key);
 
-  // var image;
-  // Appoinment(
-  //   this.shopName,
-  //   this.image,
-  // );
 
   @override
   State<CancelAppoinment> createState() => _CancelAppoinmentState();
-  //   shopName,
-  //   image,
-  // );
+
 }
 
 class _CancelAppoinmentState extends State<CancelAppoinment> {
-  // var shopName;
-  // String? shopDescription = "Description about shop and detials ";
-  // var image;
 
-  // _AppoinmentState(
-  //   this.shopName,
-  //   this.image,
-  // );
   @override
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
@@ -40,7 +26,7 @@ class _CancelAppoinmentState extends State<CancelAppoinment> {
     Widget expandedData(
       String listTitle,
     ) {
-      return Container(
+      return SizedBox(
         height: height * 0.08,
         child: Card(
           shape:

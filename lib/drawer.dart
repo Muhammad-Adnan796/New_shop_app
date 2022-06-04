@@ -85,7 +85,7 @@ class MyDrawer extends StatelessWidget {
                       Padding(
                        padding: const EdgeInsets.only(top:10.0),
                         child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 79,
       height: 25,
       
@@ -131,7 +131,7 @@ class MyDrawer extends StatelessWidget {
         Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 79,
       height: 25,
       
@@ -177,7 +177,7 @@ class MyDrawer extends StatelessWidget {
             Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 100,
       height: 25,
       
@@ -223,7 +223,7 @@ class MyDrawer extends StatelessWidget {
         Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -269,7 +269,7 @@ class MyDrawer extends StatelessWidget {
                Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -315,7 +315,7 @@ class MyDrawer extends StatelessWidget {
          Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -361,7 +361,7 @@ class MyDrawer extends StatelessWidget {
          Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -407,7 +407,7 @@ class MyDrawer extends StatelessWidget {
          Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -453,7 +453,7 @@ class MyDrawer extends StatelessWidget {
          Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -499,7 +499,7 @@ class MyDrawer extends StatelessWidget {
          Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -545,7 +545,7 @@ class MyDrawer extends StatelessWidget {
         Padding(
   padding: const EdgeInsets.only(top:10.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 150,
       height: 25,
       
@@ -591,7 +591,7 @@ class MyDrawer extends StatelessWidget {
         Padding(
   padding: const EdgeInsets.only(top:340.0),
           child: Row(children: [
-                           Container(
+                           SizedBox(
       width: 90,
       height: 25,
       

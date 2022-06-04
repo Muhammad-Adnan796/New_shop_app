@@ -1,4 +1,4 @@
-import 'package:diagnose/appointments_screens/Book_appionment.dart';
+
 import 'package:diagnose/appointments_screens/appoinment_items.dart';
 import 'package:diagnose/drawer.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ class _AppoinmentLocationState extends State<AppoinmentLocation> {
     Widget countryList(String title, String subTitle) {
       return Padding(
         padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
-        child: Container(
+        child: SizedBox(
           height: height * 0.09,
           width: width * 0.9,
           child: Card(

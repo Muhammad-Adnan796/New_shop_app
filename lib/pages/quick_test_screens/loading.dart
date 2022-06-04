@@ -68,13 +68,13 @@ class _LoadingQuickTestState extends State<LoadingQuickTest> {
                   SizedBox(
                     width: width * 0.04,
                   ),
-                  Container(
+                  SizedBox(
                     width: width * 0.7,
                     child: LinearProgressIndicator(
                       value: 0.1,
                       backgroundColor: Colors.white.withOpacity(0.5),
                       valueColor:
-                          new AlwaysStoppedAnimation<Color>(Colors.white),
+                           AlwaysStoppedAnimation<Color>(Colors.white),
                     ),
                   ),
                 ],

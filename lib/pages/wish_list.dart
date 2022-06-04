@@ -15,7 +15,6 @@ class WishList extends StatefulWidget {
 
 class _WishListState extends State<WishList> {
   @override
-  var data = 12345;
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
@@ -123,7 +122,7 @@ class _WishListState extends State<WishList> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: width * 0.4,
                                         child: Text(
                                           "Iphone 13 Pro Max #\n Repaired",
@@ -137,7 +136,7 @@ class _WishListState extends State<WishList> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(1.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width:
                                             MediaQuery.of(context).size.width *
                                                 0.1,
@@ -150,7 +149,7 @@ class _WishListState extends State<WishList> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(1.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width:
                                             MediaQuery.of(context).size.width *
                                                 0.01,
@@ -173,7 +172,7 @@ class _WishListState extends State<WishList> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           top: 5.0, left: 10),
-                                      child: Container(
+                                      child: SizedBox(
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
@@ -187,11 +186,9 @@ class _WishListState extends State<WishList> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           top: 5.0, left: 20),
-                                      child: Container(
-                                        child: Icon(
-                                          Icons.remove,
-                                          color: Colors.grey,
-                                        ),
+                                      child: Icon(
+                                        Icons.remove,
+                                        color: Colors.grey,
                                       ),
                                     ),
                                     Padding(
@@ -214,14 +211,9 @@ class _WishListState extends State<WishList> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           top: 5.0, left: 7),
-                                      child: Container(
-                                        // width:
-                                        //     MediaQuery.of(context).size.width *
-                                        //         0.,
-                                        child: Icon(
-                                          Icons.add,
-                                          color: Colors.grey,
-                                        ),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.grey,
                                       ),
                                     ),
                                   ],
@@ -280,7 +272,7 @@ class _WishListState extends State<WishList> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: width * 0.4,
                                         child: Text(
                                           "Iphone 13 Pro Max #\n Repaired",
@@ -294,7 +286,7 @@ class _WishListState extends State<WishList> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(1.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: width * 0.1,
                                         child: Icon(
                                           Icons.favorite,
@@ -305,7 +297,7 @@ class _WishListState extends State<WishList> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(1.0),
-                                      child: Container(
+                                      child: SizedBox(
                                         width: width * 0.01,
                                         child: Icon(
                                           Icons.delete_outlined,
@@ -326,7 +318,7 @@ class _WishListState extends State<WishList> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           top: 5.0, left: 10),
-                                      child: Container(
+                                      child: SizedBox(
                                           width: width * 0.3,
                                           child: Text(
                                             "\$12344",
@@ -335,13 +327,11 @@ class _WishListState extends State<WishList> {
                                           )),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(
+                                      padding:  EdgeInsets.only(
                                           top: 5.0, left: 20),
-                                      child: Container(
-                                        child: Icon(
-                                          Icons.remove,
-                                          color: Colors.grey,
-                                        ),
+                                      child: Icon(
+                                        Icons.remove,
+                                        color: Colors.grey,
                                       ),
                                     ),
                                     Padding(
@@ -361,11 +351,9 @@ class _WishListState extends State<WishList> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           top: 5.0, left: 7),
-                                      child: Container(
-                                        child: Icon(
-                                          Icons.add,
-                                          color: Colors.grey,
-                                        ),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.grey,
                                       ),
                                     ),
                                   ],
@@ -544,8 +532,8 @@ class _WishListState extends State<WishList> {
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
                       colors: [
-                        const Color(0xFF00ACEE),
-                        const Color(0xFF1DBF73),
+                         Color(0xFF00ACEE),
+                         Color(0xFF1DBF73),
                       ],
                     ),
                   ),

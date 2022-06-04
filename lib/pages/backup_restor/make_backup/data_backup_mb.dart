@@ -1,3 +1,4 @@
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/backup_restor/backup_loading.dart';
 import 'package:diagnose/pages/backup_restor/make_backup/appdata_mb.dart';
@@ -19,7 +20,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    Widget FourBoxes() {
+    Widget fourBoxes() {
       return Container(
         height: height * 0.18,
         width: width * 0.4,
@@ -89,19 +90,23 @@ class _DataBackupMBState extends State<DataBackupMB> {
     }
 
     return Scaffold(
+      drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.apps,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
+            ),
+          );
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -114,21 +119,20 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 110.0),
-                      child: Container(
-                          child: Text(
+                      child: Text(
                         "Data Backup",
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: 'Roboto',
                             color: Color(0XFF191D21),
                             decoration: TextDecoration.none),
-                      )),
+                      ),
                     ),
                   ],
                 ),
               ),
             ),
-            FourBoxes(),
+            fourBoxes(),
             SizedBox(
               height: height * 0.05,
             ),
@@ -141,7 +145,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -200,7 +204,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -259,7 +263,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -318,7 +322,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -377,7 +381,7 @@ class _DataBackupMBState extends State<DataBackupMB> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(

@@ -1,4 +1,3 @@
-import 'package:diagnose/pages/quick_test_screens/back_camera_open.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -50,8 +49,8 @@ class _FrontCameraHTState extends State<FrontCameraHT> {
                 const Text(
                   'Front Cam',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                  style:  TextStyle(
+                    color:  Color.fromRGBO(255, 255, 255, 1),
                     fontFamily: 'Advent Pro',
                     fontSize: 25,
                     decoration: TextDecoration.none,
@@ -69,8 +68,8 @@ class _FrontCameraHTState extends State<FrontCameraHT> {
               width: width * 0.6,
               height: height * 0.3,
               decoration: const BoxDecoration(
-                image: const DecorationImage(
-                    image: const AssetImage('assets/Gif/box.gif'),
+                image:  DecorationImage(
+                    image:  AssetImage('assets/Gif/box.gif'),
                     fit: BoxFit.fill),
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/backup_restor/data_sharing/recieving_data.dart';
 import 'package:diagnose/pages/backup_restor/data_sharing/sending_data.dart';
@@ -19,19 +20,23 @@ class _ConnectiongBKState extends State<ConnectiongBK> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.apps,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
+            ),
+          );
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -44,15 +49,14 @@ class _ConnectiongBKState extends State<ConnectiongBK> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 110.0),
-                      child: Container(
-                          child: Text(
+                      child: Text(
                         "Connecting...",
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: 'Roboto',
                             color: Color(0XFFFE6867),
                             decoration: TextDecoration.none),
-                      )),
+                      ),
                     ),
                   ],
                 ),
@@ -81,7 +85,7 @@ class _ConnectiongBKState extends State<ConnectiongBK> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.08,
                 child: Container(
@@ -144,7 +148,7 @@ class _ConnectiongBKState extends State<ConnectiongBK> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.08,
                 child: Container(

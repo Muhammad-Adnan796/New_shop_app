@@ -27,7 +27,7 @@ class _ScreenAnalysisFTState extends State<ScreenAnalysisFT> {
               begin: Alignment.topRight,
               end: Alignment.bottomRight,
               colors: [
-                const Color.fromRGBO(29, 191, 115, 1),
+                 Color.fromRGBO(29, 191, 115, 1),
                 Color.fromRGBO(0, 172, 238, 1)
               ]),
         ),
@@ -39,7 +39,7 @@ class _ScreenAnalysisFTState extends State<ScreenAnalysisFT> {
             const Text(
               '1/6',
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style:  TextStyle(
                 color: Color.fromRGBO(255, 255, 255, 1),
                 fontFamily: 'Roboto',
                 fontSize: 12,
@@ -56,12 +56,12 @@ class _ScreenAnalysisFTState extends State<ScreenAnalysisFT> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.1,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],
@@ -89,8 +89,8 @@ class _ScreenAnalysisFTState extends State<ScreenAnalysisFT> {
               width: width * 0.6,
               height: height * 0.3,
               decoration: const BoxDecoration(
-                image: const DecorationImage(
-                    image: const AssetImage('assets/Gif/screenTest.gif'),
+                image:  DecorationImage(
+                    image:  AssetImage('assets/Gif/screenTest.gif'),
                     fit: BoxFit.fill),
               ),
             ),

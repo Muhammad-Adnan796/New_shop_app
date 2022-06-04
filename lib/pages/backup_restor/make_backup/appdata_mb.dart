@@ -13,7 +13,6 @@ class _AppDataMbState extends State<AppDataMb> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
@@ -24,18 +23,14 @@ class _AppDataMbState extends State<AppDataMb> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Positioned(
-              top: 20,
-              child: Icon(
-                Icons.apps,
-                color: Colors.black,
-              ),
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
             ),
           );
         }),
       ),
-      body: Container(
-          child: Column(children: [
+      body: Column(children: [
         Center(
             child: Padding(
                 padding: const EdgeInsets.only(top: 30, bottom: 10),
@@ -48,24 +43,22 @@ class _AppDataMbState extends State<AppDataMb> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: Container(
-                                child: Image.asset(
+                            child: Image.asset(
                               "assets/icon.png",
                               height: 30,
                               width: 30,
-                            ))),
+                            )),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 0.0),
-                        child: Container(
-                            child: Text(
+                        child: Text(
                           "App Data",
                           style: TextStyle(
                               fontSize: 25,
                               fontFamily: 'Roboto',
                               color: Colors.black,
                               decoration: TextDecoration.none),
-                        )),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 25.0),
@@ -88,7 +81,7 @@ class _AppDataMbState extends State<AppDataMb> {
             ),
           ),
         ),
-      ])),
+      ]),
     );
   }
 }

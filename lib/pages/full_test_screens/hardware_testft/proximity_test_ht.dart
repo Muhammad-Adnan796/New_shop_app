@@ -1,4 +1,4 @@
-import 'package:diagnose/pages/full_test_screens/hardware_testft/charging_test_ht.dart';
+
 import 'package:diagnose/pages/full_test_screens/hardware_testft/face_id_test_ht.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -56,12 +56,12 @@ class _ProximityTestHTState extends State<ProximityTestHT> {
                 SizedBox(
                   width: width * 0.04,
                 ),
-                Container(
+                SizedBox(
                   width: width * 0.7,
                   child: LinearProgressIndicator(
                     value: 0.5,
                     backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                    valueColor:  AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
               ],

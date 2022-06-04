@@ -30,18 +30,17 @@ class _SendingStopState extends State<SendingStop> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                  child: Text(
+              Text(
                 "File Name",
                 style: TextStyle(
-                    fontSize: 10,
-                    fontFamily: 'Advent Pro',
-                    color: Color(0xFF000000),
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.w300),
-              )),
+                fontSize: 10,
+                fontFamily: 'Advent Pro',
+                color: Color(0xFF000000),
+                decoration: TextDecoration.none,
+                fontWeight: FontWeight.w300),
+              ),
               Text(
-                "${percentage}%",
+                "$percentage%",
                 style: TextStyle(
                     decoration: TextDecoration.none,
                     fontFamily: "Roboto",

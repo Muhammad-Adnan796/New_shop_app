@@ -7,6 +7,7 @@ import 'package:diagnose/pages/full_test_screens/motion_testst/motion_test_mt.da
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
 import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
 import 'package:diagnose/pages/quick_test_screens/quick_test.dart';
+import 'package:diagnose/pages/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -87,7 +88,7 @@ class _HomeState extends State<Home> {
               name,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  color: const Color.fromRGBO(0, 0, 0, 1),
+                  color: Color.fromRGBO(0, 0, 0, 1),
                   fontFamily: 'Advent Pro',
                   wordSpacing: 2,
                   fontSize: 16,
@@ -141,15 +142,13 @@ class _HomeState extends State<Home> {
               left: 3,
               top: 8,
             ),
-            child: Expanded(
-              child: Text(
-                name,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontFamily: "Advent Pro",
-                  fontSize: 13,
-                  fontWeight: FontWeight.w300,
-                ),
+            child: Text(
+              name,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: "Advent Pro",
+                fontSize: 13,
+                fontWeight: FontWeight.w300,
               ),
             ),
           ),
@@ -191,7 +190,14 @@ class _HomeState extends State<Home> {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Setting(),
+                    ),
+                  );
+                },
                 icon: const Icon(
                   Icons.help_outline,
                   color: Colors.black,
@@ -210,7 +216,7 @@ class _HomeState extends State<Home> {
           ),
           const Text(
             "Categories",
-            style: const TextStyle(
+            style: TextStyle(
               fontFamily: "Roboto",
               color: Color(0xFF191D21),
               fontSize: 24,
@@ -387,7 +393,6 @@ class _HomeState extends State<Home> {
           ),
           Expanded(
             child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
               child: Column(
                 children: [
                   Padding(
@@ -604,7 +609,7 @@ class _HomeState extends State<Home> {
                                             style: TextStyle(
                                                 fontFamily: "Advent Pro",
                                                 fontWeight: FontWeight.w300,
-                                                fontSize: 14),
+                                                fontSize: 14,),
                                           ),
                                         ),
                                       ),
@@ -670,7 +675,7 @@ class _HomeState extends State<Home> {
                                             Color(0xFF00ACEE),
                                           ]),
                                           borderRadius:
-                                              BorderRadius.circular(20)),
+                                              BorderRadius.circular(20),),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
@@ -681,9 +686,9 @@ class _HomeState extends State<Home> {
                                         decoration: BoxDecoration(
                                             color: Colors.white,
                                             borderRadius:
-                                                BorderRadius.circular(20)),
+                                                BorderRadius.circular(20),),
                                         child: const Center(
-                                            child: const Text(
+                                            child: Text(
                                           "Check now",
                                           style: TextStyle(
                                               fontFamily: "Advent Pro",
@@ -848,15 +853,13 @@ class _HomeState extends State<Home> {
                                         left: 3,
                                         top: 8,
                                       ),
-                                      child: Expanded(
-                                        child: Text(
-                                          "Buttons",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: "Advent Pro",
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w300,
-                                          ),
+                                      child: Text(
+                                        "Buttons",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontFamily: "Advent Pro",
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w300,
                                         ),
                                       ),
                                     ),
@@ -971,7 +974,7 @@ class _HomeState extends State<Home> {
                                             borderRadius:
                                                 BorderRadius.circular(20)),
                                         child: const Center(
-                                            child: const Text(
+                                            child: Text(
                                           "Check now",
                                           style: TextStyle(
                                               fontFamily: "Advent Pro",

@@ -1,5 +1,5 @@
 import 'package:diagnose/pages/quick_test_screens/ohno_earp.dart';
-import 'package:diagnose/pages/quick_test_screens/ohno_microphone.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -54,7 +54,7 @@ class _Successfull2State extends State<Successfull2> {
               SizedBox(
                 width: width * 0.04,
               ),
-              Container(
+              SizedBox(
                 width: width * 0.7,
                 child: LinearProgressIndicator(
                   value: 0.3,

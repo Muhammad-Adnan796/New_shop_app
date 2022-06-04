@@ -1,3 +1,4 @@
+import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/backup_restor/restore/appdata_restor.dart';
 import 'package:diagnose/pages/backup_restor/restore/call_log_restor.dart';
@@ -89,19 +90,23 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
     }
 
     return Scaffold(
+      drawer: MyDrawer(),
       bottomNavigationBar: NaviBar(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.apps,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: Icon(
+              Icons.apps,
+              color: Colors.black,
+            ),
+          );
+        }),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -114,15 +119,14 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 138.0),
-                      child: Container(
-                          child: Text(
+                      child: Text(
                         "Restore",
                         style: TextStyle(
                             fontSize: 25,
                             fontFamily: 'Roboto',
                             color: Color(0XFF191D21),
                             decoration: TextDecoration.none),
-                      )),
+                      ),
                     ),
                   ],
                 ),
@@ -141,7 +145,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -200,7 +204,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -259,7 +263,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -318,7 +322,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
@@ -377,7 +381,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                   ),
                 );
               },
-              child: Container(
+              child: SizedBox(
                 width: width * 0.8,
                 height: height * 0.06,
                 child: Container(
