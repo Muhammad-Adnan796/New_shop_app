@@ -1,4 +1,5 @@
 import 'package:diagnose/pages/categories.dart';
+import 'package:diagnose/pages/categories2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -148,7 +149,7 @@ class _SuccessFrontBackState extends State<SuccessFrontBack> {
                       type: PageTransitionType.rightToLeft,
                       reverseDuration: const Duration(seconds: 1),
                       duration: const Duration(seconds: 1),
-                      child: const Home(),
+                      child: const Home2(),
                     ),
                   );
                 },

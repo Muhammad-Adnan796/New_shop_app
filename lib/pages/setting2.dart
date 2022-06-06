@@ -8,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Setting extends StatefulWidget {
-  const Setting({Key? key}) : super(key: key);
+class Setting2 extends StatefulWidget {
+  const Setting2({Key? key}) : super(key: key);
 
   @override
-  State<Setting> createState() => _SettingState();
+  State<Setting2> createState() => _Setting2State();
 }
 
-class _SettingState extends State<Setting> {
+class _Setting2State extends State<Setting2> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // bottomNavigationBar: NaviBar(),
+      bottomNavigationBar: NaviBar(),
       drawer: MyDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,

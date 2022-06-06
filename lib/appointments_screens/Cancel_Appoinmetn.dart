@@ -1,4 +1,3 @@
-
 import 'package:diagnose/appointments_screens/appoinment_items.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:flutter/material.dart';
@@ -8,14 +7,11 @@ import 'package:page_transition/page_transition.dart';
 class CancelAppoinment extends StatefulWidget {
   const CancelAppoinment({Key? key}) : super(key: key);
 
-
   @override
   State<CancelAppoinment> createState() => _CancelAppoinmentState();
-
 }
 
 class _CancelAppoinmentState extends State<CancelAppoinment> {
-
   @override
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
@@ -27,7 +23,7 @@ class _CancelAppoinmentState extends State<CancelAppoinment> {
       String listTitle,
     ) {
       return SizedBox(
-        height: height * 0.08,
+        height: height * 0.07,
         child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),

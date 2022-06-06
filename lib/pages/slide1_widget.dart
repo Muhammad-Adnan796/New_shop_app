@@ -1,3 +1,4 @@
+import 'package:diagnose/navbar/navb.dart';
 import 'package:diagnose/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -111,7 +112,7 @@ class _Slide1WidgetState extends State<Slide1Widget> {
                               type: PageTransitionType.rightToLeft,
                               reverseDuration: const Duration(seconds: 1),
                               duration: const Duration(seconds: 1),
-                              child: const  DashBoard(),
+                              child: const  BottomNavbar(),
                             ),
                           );
                         },

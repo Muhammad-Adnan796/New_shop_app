@@ -62,10 +62,6 @@ class _AppoinmentModalState extends State<AppoinmentModal> {
               "Shop_no": shopno[index],
               "Images": pictures[index],
             });
-            // // MaterialPageRoute(
-            // //   builder: (context) =>
-            // //       Appoinment(shopno[index], pictures[index],),
-            // ),
           },
           child: Padding(
             padding: EdgeInsets.only(left: 30.w, right: 30.w),

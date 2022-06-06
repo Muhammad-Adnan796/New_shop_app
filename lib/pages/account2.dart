@@ -1,24 +1,24 @@
 import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/navbar/navb.dart';
-import 'package:diagnose/pages/about.dart';
+import 'package:diagnose/pages/account.dart';
 import 'package:diagnose/pages/setting2.dart';
 import 'package:diagnose/pages/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Account extends StatefulWidget {
-  const Account({Key? key}) : super(key: key);
+class Account2 extends StatefulWidget {
+  const Account2({Key? key}) : super(key: key);
 
   @override
-  State<Account> createState() => _AccountState();
+  State<Account2> createState() => _Account2State();
 }
 
-class _AccountState extends State<Account> {
+class _Account2State extends State<Account2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: NaviBar(),
       drawer: MyDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -51,7 +51,7 @@ class _AccountState extends State<Account> {
                           type: PageTransitionType.rightToLeft,
                           reverseDuration: Duration(seconds: 1),
                           duration: Duration(seconds: 1),
-                          child: About(),),);
+                          child: Account()));
                 },
                 child: Icon(
                   Icons.help_outline,

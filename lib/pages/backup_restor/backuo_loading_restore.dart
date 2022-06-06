@@ -1,18 +1,17 @@
 import 'dart:async';
 import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
-import 'package:diagnose/pages/backup_restor/make_backup/data_backup_mb.dart';
 import 'package:diagnose/pages/backup_restor/restore/data_backup_restore.dart';
 import 'package:flutter/material.dart';
 
-class DataBackupLoadingMB extends StatefulWidget {
-  const DataBackupLoadingMB({Key? key}) : super(key: key);
+class DataBackupLoadingRestor extends StatefulWidget {
+  const DataBackupLoadingRestor({Key? key}) : super(key: key);
 
   @override
-  State<DataBackupLoadingMB> createState() => _DataBackupLoadingMBState();
+  State<DataBackupLoadingRestor> createState() => _DataBackupLoadingRestorState();
 }
 
-class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
+class _DataBackupLoadingRestorState extends State<DataBackupLoadingRestor> {
   @override
   void initState() {
     super.initState();
@@ -21,7 +20,7 @@ class _DataBackupLoadingMBState extends State<DataBackupLoadingMB> {
         () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DataBackupMB(),
+                builder: (context) => DataBackupRestore(),
               ),
             ));
   }

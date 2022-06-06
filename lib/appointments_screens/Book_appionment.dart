@@ -7,15 +7,11 @@ import 'package:page_transition/page_transition.dart';
 class BookAppoinment extends StatefulWidget {
   const BookAppoinment({Key? key}) : super(key: key);
 
-
-
   @override
   State<BookAppoinment> createState() => _BookAppoinmentState();
- 
 }
 
 class _BookAppoinmentState extends State<BookAppoinment> {
-
   @override
   Widget build(BuildContext context) {
     // ignore: non_constant_identifier_names
@@ -27,7 +23,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
       String listTitle,
     ) {
       return SizedBox(
-        height: height * 0.08,
+        height: height * 0.07,
         child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
@@ -231,8 +227,8 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [
-                           Color(0xFF00ACEE),
-                           Color(0xFF1DBF73),
+                          Color(0xFF00ACEE),
+                          Color(0xFF1DBF73),
                         ],
                       ),
                     ),

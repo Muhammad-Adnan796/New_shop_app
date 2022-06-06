@@ -1,4 +1,5 @@
 import 'package:diagnose/drawer.dart';
+import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/navbar/navb.dart';
 import 'package:diagnose/pages/About.dart';
 import 'package:diagnose/pages/account.dart';
@@ -7,21 +8,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/src/size_extension.dart';
 import 'package:page_transition/page_transition.dart';
 
-class WishList extends StatefulWidget {
-  const WishList({Key? key}) : super(key: key);
+class WishList2 extends StatefulWidget {
+  const WishList2({Key? key}) : super(key: key);
 
   @override
-  State<WishList> createState() => _WishListState();
+  State<WishList2> createState() => _WishList2State();
 }
 
-class _WishListState extends State<WishList> {
+class _WishList2State extends State<WishList2> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      // bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: NaviBar(),
       drawer: MyDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,

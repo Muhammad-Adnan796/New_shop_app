@@ -1,5 +1,6 @@
 import 'package:diagnose/drawer.dart';
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
+import 'package:diagnose/pages/backup_restor/backuo_loading_restore.dart';
 import 'package:diagnose/pages/backup_restor/restore/appdata_restor.dart';
 import 'package:diagnose/pages/backup_restor/restore/call_log_restor.dart';
 import 'package:diagnose/pages/backup_restor/restore/contacts_restor.dart';
@@ -460,7 +461,7 @@ class _DataBackupRestoreState extends State<DataBackupRestore> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DashBoard(),
+                          builder: (context) => DataBackupLoadingRestor(),
                         ));
                   },
                   child: const Text(

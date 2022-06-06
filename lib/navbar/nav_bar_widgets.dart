@@ -1,6 +1,9 @@
 //  bottom nav bar widgets
 import 'package:diagnose/navbar/grediant_icon.dart';
+import 'package:diagnose/navbar/navb.dart';
+import 'package:diagnose/pages/dashboard.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class NaviBar extends StatefulWidget {
   const NaviBar({Key? key}) : super(key: key);
@@ -22,7 +25,7 @@ class _NaviBarState extends State<NaviBar> {
           width: width * 0.16,
           height: height * 0.08,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0),
+            color: Colors.transparent.withOpacity(0),
             boxShadow: [
               BoxShadow(
                   blurRadius: 1,
@@ -32,7 +35,17 @@ class _NaviBarState extends State<NaviBar> {
             borderRadius: BorderRadius.circular(50),
           ),
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.rightToLeft,
+                  reverseDuration: Duration(seconds: 1),
+                  duration: Duration(seconds: 1),
+                  child: BottomNavbar(),
+                ),
+              );
+            },
             child: Padding(
               padding: const EdgeInsets.all(7),
               child: Container(
@@ -79,24 +92,6 @@ class _NaviBarState extends State<NaviBar> {
             ),
           ),
         ),
-        // Container(
-
-        //   child: Padding(
-        //     padding: EdgeInsets.only(left: 190, top: 27),
-        //     child: Icon(
-        //       Icons.home,
-        //       size: 35,
-        //     ),
-        //   ),
-        // ),
-
-        // Padding(
-        //   padding: EdgeInsets.only(left: 183, top: 60),
-        //   child: Text(
-        //     "Home",
-        //     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-        //   ),
-        // )
         circularicon(),
       ],
     );

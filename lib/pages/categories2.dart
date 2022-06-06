@@ -1,4 +1,6 @@
+
 import 'package:diagnose/drawer.dart';
+import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/pages/about.dart';
 import 'package:diagnose/pages/full_test_screens/camera_test_ft/camera_test_cmt.dart';
 import 'package:diagnose/pages/full_test_screens/connectivity_test_ft/bluetooth.dart';
@@ -9,10 +11,12 @@ import 'package:diagnose/pages/full_test_screens/hardware_testft/charging_test_h
 import 'package:diagnose/pages/full_test_screens/hardware_testft/face_id_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/hardware_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/light_sensor_ht.dart';
+import 'package:diagnose/pages/full_test_screens/hardware_testft/originality_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/proximity_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/side_buttons_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/stress_test_ht.dart';
 import 'package:diagnose/pages/full_test_screens/hardware_testft/vibration_test_ht.dart';
+import 'package:diagnose/pages/full_test_screens/motion_testst/just_shake_mt.dart';
 import 'package:diagnose/pages/full_test_screens/motion_testst/motion_test_mt.dart';
 import 'package:diagnose/pages/full_test_screens/screen_testft/screen_test.dart';
 import 'package:diagnose/pages/full_test_screens/sound_testft/sound_test_st.dart';
@@ -30,17 +34,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'full_test_screens/hardware_testft/originality_test_ht.dart';
-import 'full_test_screens/motion_testst/just_shake_mt.dart';
-
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Home2 extends StatefulWidget {
+  const Home2({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Home2> createState() => _Home2State();
 }
 
-class _HomeState extends State<Home> {
+class _Home2State extends State<Home2> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -179,6 +180,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       drawer: MyDrawer(),
+      bottomNavigationBar: NaviBar(),
       appBar: AppBar(
         elevation: 5,
         shadowColor: Colors.blueAccent,

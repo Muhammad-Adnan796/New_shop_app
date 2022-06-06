@@ -1,5 +1,6 @@
 import 'package:diagnose/auth/login.dart';
 import 'package:diagnose/drawer.dart';
+import 'package:diagnose/navbar/nav_bar_widgets.dart';
 import 'package:diagnose/navbar/navb.dart';
 import 'package:diagnose/pages/about.dart';
 import 'package:diagnose/pages/backup_restor/connecting.dart';
@@ -8,14 +9,14 @@ import 'package:diagnose/pages/categories2.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({Key? key}) : super(key: key);
+class DashBoard2 extends StatefulWidget {
+  const DashBoard2({Key? key}) : super(key: key);
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<DashBoard2> createState() => _DashBoard2State();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _DashBoard2State extends State<DashBoard2> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -69,7 +70,7 @@ class _DashBoardState extends State<DashBoard> {
 
     return Scaffold(
       drawer: MyDrawer(),
-      // bottomNavigationBar: const BottomNavbar(),
+      bottomNavigationBar: const NaviBar(),
       appBar: AppBar(
         title: Image.asset(
           "assets/Near_repair_Type_II-removebg-preview.png",

@@ -1,3 +1,4 @@
+import 'package:diagnose/pages/categories2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
@@ -86,7 +87,7 @@ class _BackCameraHTState extends State<BackCameraHT> {
                     type: PageTransitionType.fade,
                     reverseDuration: const Duration(seconds: 1),
                     duration: const Duration(milliseconds: 800),
-                    child: const Home(),
+                    child: const Home2(),
                   ),
                 );
               },

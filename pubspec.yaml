@@ -40,7 +40,7 @@ dependencies:
   flutter_screenutil: ^5.3.1
   getwidget: ^2.0.5
   # google_fonts: ^3.0.1
-  # curved_navigation_bar: ^1.0.3
+  molten_navigationbar_flutter: ^0.0.1
 
   
 dev_dependencies:

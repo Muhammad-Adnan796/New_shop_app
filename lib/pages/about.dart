@@ -1,6 +1,8 @@
 // ignore_for_file: unnecessary_const
 
 import 'package:diagnose/navbar/nav_bar_widgets.dart';
+import 'package:diagnose/navbar/navb.dart';
+import 'package:diagnose/pages/dashBoard2.dart';
 import 'package:diagnose/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -30,7 +32,7 @@ class _AboutState extends State<About> {
                       type: PageTransitionType.rightToLeft,
                       reverseDuration: const Duration(seconds: 1),
                       duration: const Duration(seconds: 1),
-                      child: const DashBoard(),
+                      child: const BottomNavbar(),
                     ),
                   );
                 },
