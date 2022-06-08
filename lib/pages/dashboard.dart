@@ -21,7 +21,8 @@ class _DashBoardState extends State<DashBoard> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    Widget makDiv(String image, String title, String description) {
+    Widget makDiv(
+        String image, String title, String description, double size1) {
       return Container(
         height: height * 0.19,
         width: width * 0.38,
@@ -36,6 +37,7 @@ class _DashBoardState extends State<DashBoard> {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           children: [
             Image.asset(
               image,
@@ -51,16 +53,18 @@ class _DashBoardState extends State<DashBoard> {
                   fontSize: 12),
             ),
             SizedBox(
-              height: height * 0.01,
+              height: height * 0.014,
             ),
-            Text(
-              description,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontFamily: "Roboto",
-                  fontWeight: FontWeight.w300,
-                  fontSize: 9,
-                  color: Color(0xFF626262)),
+            Flexible(
+              child: Text(
+                description,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.w300,
+                    fontSize: size1,
+                    color: Color(0xFF626262)),
+              ),
             ),
           ],
         ),
@@ -71,10 +75,13 @@ class _DashBoardState extends State<DashBoard> {
       drawer: MyDrawer(),
       // bottomNavigationBar: const BottomNavbar(),
       appBar: AppBar(
-        title: Image.asset(
-          "assets/Near_repair_Type_II-removebg-preview.png",
-          height: height * 0.1,
-          width: width * 0.2,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: Image.asset(
+            "assets/Near_repair_Type_II-removebg-preview.png",
+            height: height * 0.1,
+            width: width * 0.2,
+          ),
         ),
         backgroundColor: Colors.white,
         leading: Builder(builder: (context) {
@@ -121,7 +128,7 @@ class _DashBoardState extends State<DashBoard> {
       ),
       body: Container(
         decoration: const BoxDecoration(
-          color: Color(0xffD6D7D7),
+         
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,12 +195,13 @@ class _DashBoardState extends State<DashBoard> {
                 makDiv(
                     "assets/Icons/carbon_wifi-not-secure.png",
                     "Network Unlock",
-                    "After unlock you can use your\nPhone any country and any sim"),
+                    "After unlock you can use your\nPhone any country and any\nsim",
+                    9),
                 SizedBox(
                   width: width * 0.082,
                 ),
                 makDiv("assets/Icons/icon-png (1).png", "Buy/Sale Devices",
-                    "Now phone buy and sale is easier\nthen before you can see all prices\nand sell your phone just in minutes"),
+                    "Now phone buy and sale is easier\nthen before you can see all prices\nand sell your phone just in minutes",8),
               ],
             ),
             SizedBox(
@@ -203,7 +211,7 @@ class _DashBoardState extends State<DashBoard> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 makDiv("assets/Icons/icon-ss.png", "TopUp You Phone",
-                    "You can load your talk time\nBalance over counteries just by\nnumber"),
+                    "You can load your talk time\nBalance over counteries just\nby number",9),
                 SizedBox(
                   width: width * 0.082,
                 ),
@@ -219,7 +227,7 @@ class _DashBoardState extends State<DashBoard> {
                   child: makDiv(
                       "assets/Icons/Diagnostic-icon.png",
                       "Diagnostics",
-                      "You can diagnos the all issue in\nyour phone in one clicke"),
+                      "You can diagnos the\nallissue in your phone in\none clicke",10),
                 ),
                 SizedBox(
                   height: height * 0.01,
@@ -242,7 +250,7 @@ class _DashBoardState extends State<DashBoard> {
                     );
                   },
                   child: makDiv("assets/Icons/icon2.png", "Back Up & Restore",
-                      "You can transfer your data faster\nand sequre to PC or Phone"),
+                      "You can transfer your data\nfaster and sequre to PC\nor Phone",10),
                 ),
                 SizedBox(
                   width: width * 0.082,
@@ -257,7 +265,7 @@ class _DashBoardState extends State<DashBoard> {
                     );
                   },
                   child: makDiv("assets/Icons/Grocery Store.png", "Store",
-                      "All quantity products cheaper price,Then everywhere buy conline or walk in your nearest store."),
+                      "All quantity products cheaper price,Then everywhere buy conline or walk in your nearest store.",9),
                 )
               ],
             )

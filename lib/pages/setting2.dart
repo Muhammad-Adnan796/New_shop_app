@@ -48,13 +48,15 @@ class _Setting2State extends State<Setting2> {
               padding: const EdgeInsets.only(right: 15.0),
               child: GestureDetector(
                 onTap: () {
-                   Navigator.push(
-                            context,
-                            PageTransition(
-                                type: PageTransitionType.fade,
-                                reverseDuration: Duration(seconds: 1),
-                                duration: Duration(seconds: 1),
-                                child: About(),),);
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      reverseDuration: Duration(seconds: 1),
+                      duration: Duration(seconds: 1),
+                      child: About(),
+                    ),
+                  );
                 },
                 child: Icon(
                   Icons.help_outline,
@@ -145,7 +147,7 @@ class _Setting2State extends State<Setting2> {
                   child: Text("Access your mobile system"),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 85.0),
+                  padding: const EdgeInsets.only(left: 88.0),
                   child: GFToggle(
                     enabledTrackColor: Color(0xff01a5ae),
                     onChanged: (val) {},

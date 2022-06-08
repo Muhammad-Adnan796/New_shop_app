@@ -6,6 +6,8 @@ import 'package:diagnose/pages/dashboard.dart';
 import 'package:diagnose/pages/settings.dart';
 import 'package:diagnose/pages/wish_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:molten_navigationbar_flutter/molten_navigationbar.dart';
 
@@ -35,18 +37,15 @@ Account(),
 Setting(),
 ];
 
-// Widget _getCurrentPage() => _pages[_selectedIndex];
-
-// final tab =[
-
-
-
-// ];
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return  Scaffold(
       bottomNavigationBar: MoltenBottomNavigationBar(
+        borderRaduis: BorderRadius.circular(0),
+       domeWidth: 80,domeHeight: 12,
                   barHeight: MediaQuery.of(context).size.height*0.08,
                         colori: Color.fromRGBO(29, 191, 115, 1),
                 selectedIndex: _selectedIndex,
@@ -72,7 +71,9 @@ Setting(),
                   ),
                   
                   MoltenTab(
-                    icon: Icon(Icons.headphones),
+                  icon: Center(child: FaIcon(FontAwesomeIcons.stethoscope,size: 20,),),
+        
+                  
                    selectedColor:Color.fromRGBO(29, 191, 115, 1),
                     unselectedColor: Colors.black
                     

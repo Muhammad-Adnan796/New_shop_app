@@ -77,7 +77,7 @@ class _WishListState extends State<WishList> {
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
-                        )))),
+                        ),),),),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: Container(
@@ -85,6 +85,7 @@ class _WishListState extends State<WishList> {
                   width: MediaQuery.of(context).size.width * 0.95,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
+                    
                     border: Border.all(color: Color(0xFFEBF0FF)),
                   ),
                   child: Row(
@@ -92,8 +93,6 @@ class _WishListState extends State<WishList> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Column(
-                        // crossAxisAlignment: CrossAxisAlignment.center,
-                        // mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,6 +239,7 @@ class _WishListState extends State<WishList> {
                       color: Color(0xFFEBF0FF),
                     ),
                     borderRadius: BorderRadius.circular(5),
+                    
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -369,62 +369,60 @@ class _WishListState extends State<WishList> {
                     ],
                   )),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 7),
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(top: 10, left: 10),
-                    width: width * 0.6,
-                    height: height * 0.08,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5)),
-                    child: TextField(
-                      style: TextStyle(color: Colors.green),
-                      decoration: InputDecoration(
-                        hoverColor: Colors.red,
-                        hintStyle: TextStyle(
-                            color: Color(0xFF9098B1),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.grey),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(5),
-                            topLeft: Radius.circular(5),
-                          ),
-                        ),
-                        hintText: "    Enter Cupon Code ",
-                      ),
-                      maxLines: 5,
-      
-                      // enabled: false,
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 10, left: 0),
-                    width: width * 0.3,
-                    height: height * 0.08,
-                    // ignore: prefer_const_constructors
-                    decoration: BoxDecoration(
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 10, left: 10),
+                  width: width * 0.64,
+                  height: height * 0.08,
+                  decoration: BoxDecoration(
                       color: Colors.white,
-                      // ignore: prefer_const_constructors
-                      border: Border.all(
-                        width: 1,
-                        color: Color(0xFF1DBF73),
+                      borderRadius: BorderRadius.circular(5)),
+                      
+                  child: TextField(
+                    style: TextStyle(color: Colors.green),
+                    decoration: InputDecoration(
+                      hoverColor: Colors.red,
+                      hintStyle: TextStyle(
+                          color: Color(0xFF9098B1),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(width: 1, color: Colors.grey.withOpacity(0.6)),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(5),
+                          topLeft: Radius.circular(5),
+                        ),
                       ),
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(5),
-                        bottomRight: Radius.circular(5),
-                      ),
+                      hintText: "    Enter Cupon Code ",
                     ),
-                    child: Center(
-                      child: Text("Apply"),
+                    maxLines: 5,
+      
+                    // enabled: false,
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 10, left: 0),
+                  width: width * 0.3,
+                  height: height * 0.08,
+                  // ignore: prefer_const_constructors
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    // ignore: prefer_const_constructors
+                    border: Border.all(
+                      width: 1,
+                      color: Color(0xFF1DBF73).withOpacity(0.6),
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(5),
+                      bottomRight: Radius.circular(5),
                     ),
                   ),
-                ],
-              ),
+                  child: Center(
+                    child: Text("Apply"),
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: height * 0.01,
@@ -434,7 +432,8 @@ class _WishListState extends State<WishList> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  border: Border.all(color: Color(0xFF9098B1)),
+                  
+                  border: Border.all(color: Color(0xFF9098B1).withOpacity(0.3)),
                 ),
                 child: Column(
                   children: [
@@ -526,7 +525,7 @@ class _WishListState extends State<WishList> {
                 child: Card(
                   child: Container(
                     height: height * 0.06,
-                    width: width * 0.89,
+                    width: width * 0.934,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.r),
@@ -545,7 +544,7 @@ class _WishListState extends State<WishList> {
                         borderRadius: BorderRadius.circular(15.r),
                       ),
                       height: height * 0.058,
-                      width: width * 0.88,
+                      width: width * 0.92,
                       alignment: Alignment.center,
                       child: Text(
                         "Check Out",
